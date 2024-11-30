@@ -1,12 +1,15 @@
-import { TestimonialCarousel } from '@/components/testimonial-carousel'
-import { Hero } from '@/components/Hero'
-import { AboutMe } from '@/components/AboutMe'
-import { FeatureProjects } from '@/components/FeatureProjects'
-import { GetInTouch } from '@/components/GetInTouch'
-import { Footer } from '@/components/Footer'
-import { Header } from '@/components/Header'
+'use client'
+import { TestimonialCarousel } from '@/components/home/TestimonialCarousel'
+import { Hero } from '@/components/home/Hero'
+import { AboutMe } from '@/components/home/AboutMe'
+import { FeatureProjects } from '@/components/home/FeatureProjects'
+import { GetInTouch } from '@/components/home/GetInTouch'
+import { Footer } from '@/components/shared/Footer'
+import { Header } from '@/components/shared/Header'
+import { useScrollToTop } from '@/app/hooks/useScrollToTop'
 
 export default function Home() {
+  useScrollToTop()
   return (
     <div className="min-h-screen flex flex-col text-white relative overflow-hidden bg-navy-primary">
       <Header key="header" />

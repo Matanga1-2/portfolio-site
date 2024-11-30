@@ -13,21 +13,21 @@ interface Testimonial {
 const testimonials: Testimonial[] = [
   {
     id: 1,
-    text: "Matans technical expertise and leadership skills make him an invaluable asset. His ability to navigate complex challenges and deliver results is truly impressive.",
-    author: "Sarah Johnson",
-    role: "CTO"
+    text: "Matan has the perfect blend of technical capabilities, business understanding and soft skills required to communicate and manage large scale projects across an organization.",
+    author: "Or",
+    role: "Chief Revenue Officer"
   },
   {
     id: 2,
-    text: "Working with Matan was a game-changer for our project. His innovative approach and deep understanding of both technology and user needs led to exceptional outcomes.",
-    author: "Alex Chen",
-    role: "Product Owner"
+    text: "Matan is always willing to help, proactive, and collaborative. His knowledge is vast and extensive, he takes ownership of any kind of task and presents creative solutions to complex problems.",
+    author: "Yury",
+    role: "Principal Lead Engineer"
   },
   {
     id: 3,
-    text: "Matans ability to translate complex technical concepts into actionable strategies is unparalleled. He's not just a product manager; he's a visionary leader.",
-    author: "Emily Roberts",
-    role: "Engineering Manager"
+    text: "Matan is a sharp and fast thinker, an analytical person, and always open-minded to fresh new ideas. A great asset for any company.",
+    author: "Tamir",
+    role: "Product Designer"
   }
 ]
 
