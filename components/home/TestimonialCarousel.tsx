@@ -79,7 +79,7 @@ export function TestimonialCarousel() {
           <div className="w-full max-w-2xl text-center">
             <div className="relative mb-8">
               <div className="absolute -left-4 -top-4 text-4xl text-green-400 opacity-50"></div>
-              <p className="text-base md:text-lg text-gray-300 italic">
+              <p className="text-sm sm:text-base md:text-lg text-gray-300 italic">
                 {testimonials[current].text}
               </p>
               <div className="absolute -bottom-4 -right-4 text-4xl text-green-400 opacity-50"></div>

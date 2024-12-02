@@ -12,8 +12,8 @@ export default function LotteryFinancePlatformPage() {
     <div className="min-h-screen flex flex-col text-white relative overflow-hidden bg-navy-primary">
       <Header />
       <main className="flex-grow container mx-auto px-4 pt-24 pb-20">
-        <div className="max-w-[70%] mx-auto space-y-16">
-          <section className="text-center">
+      <div className="w-full sm:max-w-[85%] md:max-w-[70%] mx-auto space-y-16 px-4 sm:px-0">
+      <section className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-green-400 bg-clip-text text-transparent">
               Lottery Finance Platform
             </h1>

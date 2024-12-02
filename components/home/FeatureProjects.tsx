@@ -19,13 +19,13 @@ export function FeatureProjects() {
     {
       id: 1,
       title: "💻 Recruitment and HR System",
-      description: "Redesigned and automated the recruiting process, scaling it to the entire IDF.",
+      description: "Redesigned the recruiting process, expanding it to the entire IDF.",
       link: "/projects/recruitment-hr-system"
     },
     {
       id: 2,
       title: "🎟️ Lottery Finance Platform",
-      description: "Overhauled an outdated finance platform to match regulations while processing $80 million annually.",
+      description: "Overhauled a finance platform that processes $80 million annually.",
       link: "/projects/lottery-finance-platform"
     },
   ];
