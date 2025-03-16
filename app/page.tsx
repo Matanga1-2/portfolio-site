@@ -2,7 +2,8 @@
 import { TestimonialCarousel } from '@/components/home/TestimonialCarousel'
 import { Hero } from '@/components/home/Hero'
 import { AboutMe } from '@/components/home/AboutMe'
-import { FeatureProjects } from '@/components/home/FeatureProjects'
+import { FeatureRoles } from '@/components/home/FeatureRoles'
+import { BuilderProjects } from '@/components/home/BuilderProjects'
 import { GetInTouch } from '@/components/home/GetInTouch'
 import { Footer } from '@/components/shared/Footer'
 import { Header } from '@/components/shared/Header'
@@ -10,6 +11,7 @@ import { useScrollToTop } from '@/app/hooks/useScrollToTop'
 
 export default function Home() {
   useScrollToTop()
+
   return (
     <div className="min-h-screen flex flex-col text-white relative overflow-hidden bg-navy-primary">
       <Header key="header" />
@@ -17,7 +19,10 @@ export default function Home() {
         <Hero key="hero" />
         <AboutMe key="about-me" />
         <section id="portfolio" key="portfolio">
-          <FeatureProjects />
+          <FeatureRoles />
+        </section>
+        <section id="builder" key="builder" className="py-20 relative">
+          <BuilderProjects />
         </section>
         <section id="testimonials" className="py-20 relative" key="testimonials">
           <div className="container mx-auto px-4">
