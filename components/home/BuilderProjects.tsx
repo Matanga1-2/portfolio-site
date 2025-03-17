@@ -40,14 +40,14 @@ export function BuilderProjects() {
 
   return (
     <div className="container mx-auto px-4" ref={containerRef}>
-      <div className="max-w-[70%] mx-auto">
+      <div className="max-w-[90%] md:max-w-[80%] lg:max-w-[70%] mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold mb-4">Builder Mindset</h2>
           <p className="text-xl text-gray-400">Turning Ideas into Reality</p>
         </div>
         
         <div className="flex flex-col gap-8">
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {featuredProjects.slice(0, 2).map((project, index) => (
               <motion.div 
                 key={index}
@@ -98,7 +98,7 @@ export function BuilderProjects() {
                 y: bottomY,
                 opacity 
               }}
-              className="group relative bg-white/5 rounded-xl overflow-hidden hover:bg-white/10 transition-colors w-[calc(50%-1rem)]"
+              className="group relative bg-white/5 rounded-xl overflow-hidden hover:bg-white/10 transition-colors w-full md:w-[calc(50%-1rem)]"
             >
               <div className="absolute inset-0 z-10">
                 <div className="absolute inset-0 bg-gradient-to-r from-purple-900/90 via-blue-900/80 to-green-900/70"></div>

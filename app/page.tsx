@@ -26,7 +26,7 @@ export default function Home() {
         </section>
         <section id="testimonials" className="py-20 relative" key="testimonials">
           <div className="container mx-auto px-4">
-            <div className="max-w-[70%] mx-auto">
+            <div className="max-w-[90%] sm:max-w-[80%] md:max-w-[70%] mx-auto">
               <h2 className="text-3xl font-bold mb-12 text-center">What Others Say</h2>
               <TestimonialCarousel />
             </div>
