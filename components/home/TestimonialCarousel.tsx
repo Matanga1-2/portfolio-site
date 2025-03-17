@@ -61,7 +61,7 @@ export function TestimonialCarousel() {
   }
 
   return (
-    <div className="relative h-[240px] w-full overflow-hidden pt-[12px]">
+    <div className="relative h-[280px] sm:h-[240px] w-full overflow-hidden pt-[12px]">
       <AnimatePresence initial={false} custom={direction}>
         <motion.div
           key={`testimonial-${current}`}
@@ -76,8 +76,8 @@ export function TestimonialCarousel() {
           }}
           className="absolute inset-0 flex items-center justify-center -mt-[48px]"
         >
-          <div className="w-full max-w-2xl text-center">
-            <div className="relative mb-8">
+          <div className="w-full max-w-2xl px-4 text-center">
+            <div className="relative mb-6 sm:mb-8">
               <div className="absolute -left-4 -top-4 text-4xl text-green-400 opacity-50"></div>
               <p className="text-sm sm:text-base md:text-lg text-gray-300 italic">
                 {testimonials[current].text}
