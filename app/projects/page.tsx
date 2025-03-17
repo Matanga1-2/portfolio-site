@@ -40,7 +40,7 @@ const projects: ProjectCategory[] = [
     projects: [
       {
         title: "Yad2 Apartment Scraper",
-        description: "Developed a tool to automate apartment hunting, reducing daily search time from 40 minutes to 2 minutes.",
+        description: "A tool to automate apartment hunting, reducing daily search time from 40 minutes to 2 minutes.",
         technologies: ["Python", "Selenium", "SQLite", "CLI"],
         githubUrl: "https://github.com/Matanga1-2/yad2-apartment-scraper"
       },
@@ -69,7 +69,7 @@ const projects: ProjectCategory[] = [
       },
       {
         title: "Simplix Chrome Extension",
-        description: "Developed during a hackathon to gather user feedback from Lusha customers",
+        description: "Developed during a hackathon to gather user feedback from Lusha customers.",
         technologies: ["JavaScript", "Chrome", "React"],
         githubUrl: "https://github.com/Matanga1-2/simplix-extension"
       }
@@ -83,21 +83,21 @@ export default function ProjectsPage() {
   return (
     <div className="min-h-screen flex flex-col text-white relative overflow-hidden bg-navy-primary">
       <Header />
-      <main className="flex-grow container mx-auto px-4 pt-24 pb-20">
-        <div className="w-full sm:max-w-[85%] md:max-w-[70%] mx-auto space-y-16 px-4 sm:px-0">
+      <main className="flex-grow container mx-auto px-2 sm:px-3 md:px-4 pt-14 sm:pt-18 md:pt-24 pb-10 sm:pb-14 md:pb-20">
+        <div className="w-full sm:max-w-[95%] md:max-w-[90%] lg:max-w-[80%] xl:max-w-[70%] mx-auto space-y-8 sm:space-y-10 md:space-y-16">
           <section className="text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-green-400 bg-clip-text text-transparent">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4 md:mb-6 bg-gradient-to-r from-blue-400 to-green-400 bg-clip-text text-transparent">
               My Projects
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-16">
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 sm:mb-10 md:mb-16">
               Building tools and solutions that bridge the gap between business needs and technical innovation
             </p>
           </section>
 
           {projects.map((category, index) => (
-            <section key={index} className="bg-white/5 rounded-2xl p-8 backdrop-blur-sm">
-              <h2 className="text-3xl font-bold mb-8 text-green-400">{category.category}</h2>
-              <div className="grid md:grid-cols-2 gap-8">
+            <section key={index} className="bg-white/5 rounded-2xl p-3 sm:p-4 md:p-6 lg:p-8 backdrop-blur-sm">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-3 sm:mb-4 md:mb-6 lg:mb-8 text-green-400">{category.category}</h2>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 md:gap-6 lg:gap-8">
                 {category.projects.map((project, projectIndex) => (
                   <div key={projectIndex} className="group relative bg-white/5 rounded-xl overflow-hidden hover:bg-white/10 transition-colors">
                     <div className="absolute inset-0 z-10">
