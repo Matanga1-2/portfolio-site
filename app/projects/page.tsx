@@ -9,6 +9,7 @@ interface Project {
   description: string
   technologies: string[]
   githubUrl?: string
+  websiteUrl?: string
   isPrivate?: boolean
 }
 
@@ -62,6 +63,12 @@ const projects: ProjectCategory[] = [
     category: "Innovation Projects",
     projects: [
       {
+        title: "EvalKit",
+        description: "A Google Sheets™ add-on for testing and evaluations of AI prompts.",
+        technologies: ["OpenAI API", "Google Workspace"],
+        websiteUrl: "https://evalkit.matangr.com/"
+      },
+      {
         title: "Port's MCP Server",
         description: "An MCP server exposing Port's capabilities to AI agents.",
         technologies: ["Python", "MCP", "Port API"],
@@ -110,6 +117,7 @@ export default function ProjectsPage() {
                       technologies={project.technologies}
                       githubUrl={project.githubUrl}
                       isPrivate={project.isPrivate}
+                      websiteUrl={project.websiteUrl}
                     />
                   </div>
                 ))}
