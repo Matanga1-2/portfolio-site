@@ -18,12 +18,18 @@ export function FeatureRoles() {
   const roles = [
     {
       id: 1,
+      title: "🚀 Internal Developer Portal (IDP)",
+      description: "Leading AI initiatives and product teams to build developer portals that transform engineering workflows.",
+      link: null
+    },
+    {
+      id: 2,
       title: "💻 Recruitment and HR System",
       description: "Redesigned the recruiting process, expanding it to the entire IDF.",
       link: "/roles/recruitment-hr-system"
     },
     {
-      id: 2,
+      id: 3,
       title: "🎟️ Lottery Finance Platform",
       description: "Overhauled a finance platform that processes $80 million annually.",
       link: "/roles/lottery-finance-platform"
@@ -38,8 +44,10 @@ export function FeatureRoles() {
             <h2 className="text-3xl font-bold mb-4">Featured Roles</h2>
             <p className="text-xl text-gray-400">Building Systems that Scale</p>
           </div>
-          <div className="grid md:grid-cols-2 gap-8">
-            {roles.map((role, index) => (
+          
+          {/* First row - 2 items */}
+          <div className="grid md:grid-cols-2 gap-8 mb-8">
+            {roles.slice(0, 2).map((role, index) => (
               <motion.div
                 key={role.id}
                 style={{ 
@@ -57,8 +65,54 @@ export function FeatureRoles() {
                     <p className="text-gray-300 mb-4">
                       {role.description}
                     </p>
+                    {role.link && (
+                      <Link
+                        href={role.link}
+                        className="text-green-400 hover:text-green-300 transition-colors inline-flex items-center"
+                      >
+                        Learn More
+                        <svg
+                          className="w-4 h-4 ml-2"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M9 5l7 7-7 7"
+                          />
+                        </svg>
+                      </Link>
+                    )}
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+
+          {/* Second row - 1 item centered */}
+          <div className="flex justify-center">
+            <motion.div
+              style={{ 
+                x: leftX,
+                opacity 
+              }}
+              className="group relative bg-white/5 rounded-xl overflow-hidden hover:bg-white/10 transition-colors w-full md:w-1/2"
+            >
+              <div className="absolute inset-0 z-10">
+                <div className="absolute inset-0 bg-gradient-to-r from-purple-900/90 via-blue-900/80 to-green-900/70"></div>
+              </div>
+              <div className="relative z-20 p-6 h-52 flex flex-col justify-center">
+                <div>
+                  <h3 className="text-xl font-semibold mb-2">{roles[2].title}</h3>
+                  <p className="text-gray-300 mb-4">
+                    {roles[2].description}
+                  </p>
+                  {roles[2].link && (
                     <Link
-                      href={role.link}
+                      href={roles[2].link}
                       className="text-green-400 hover:text-green-300 transition-colors inline-flex items-center"
                     >
                       Learn More
@@ -76,10 +130,10 @@ export function FeatureRoles() {
                         />
                       </svg>
                     </Link>
-                  </div>
+                  )}
                 </div>
-              </motion.div>
-            ))}
+              </div>
+            </motion.div>
           </div>
         </div>
       </div>

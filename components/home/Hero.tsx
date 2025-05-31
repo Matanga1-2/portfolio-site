@@ -29,10 +29,10 @@ export function Hero() {
                 HI, I&apos;M MATAN 👋🏾
               </h1>
               <h2 className="text-3xl md:text-5xl font-bold bg-gradient-to-r from-blue-400 to-green-400 bg-clip-text text-transparent">
-                A Product Manager and tech enthusiast
+                Product Leader & Builder
               </h2>
               <p className="text-lg md:text-xl text-white max-w-2xl">
-                I scale products with innovative and creative solutions while identifying the underlying user needs
+                I tackle complex challenges to build and scale impactful products
               </p>
             </div>
 
