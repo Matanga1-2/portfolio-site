@@ -1,29 +1,42 @@
-import { FaGithub } from 'react-icons/fa'
+import { FaGithub, FaGlobe } from 'react-icons/fa'
 
 interface ProjectCardProps {
   title: string
   description: string
   technologies: string[]
   githubUrl?: string
+  websiteUrl?: string
   isPrivate?: boolean
 }
 
-export default function ProjectCard({ title, description, technologies, githubUrl, isPrivate }: ProjectCardProps) {
+export default function ProjectCard({ title, description, technologies, githubUrl, websiteUrl, isPrivate }: ProjectCardProps) {
   return (
     <div className="relative z-20 p-3 sm:p-4 md:p-6 h-auto min-h-[12rem] sm:min-h-[13rem] md:min-h-[15rem] grid grid-rows-[auto_minmax(2rem,_1fr)_auto] gap-2 sm:gap-3">
-      {/* Header section with title and GitHub icon */}
+      {/* Header section with title and icons */}
       <div className="flex justify-between items-center h-auto min-h-[1.75rem]">
         <h3 className="text-base sm:text-lg md:text-xl font-semibold text-white truncate pr-2">{title}</h3>
-        {githubUrl && !isPrivate && (
-          <a 
-            href={githubUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-gray-400 hover:text-white transition-colors flex-shrink-0"
-          >
-            <FaGithub size={18} className="sm:w-5 sm:h-5 md:w-6 md:h-6" />
-          </a>
-        )}
+        <div className="flex items-center space-x-2">
+          {githubUrl && !isPrivate && (
+            <a 
+              href={githubUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-400 hover:text-white transition-colors flex-shrink-0"
+            >
+              <FaGithub size={18} className="sm:w-5 sm:h-5 md:w-6 md:h-6" />
+            </a>
+          )}
+          {websiteUrl && (
+            <a 
+              href={websiteUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-400 hover:text-white transition-colors flex-shrink-0"
+            >
+              <FaGlobe size={18} className="sm:w-5 sm:h-5 md:w-6 md:h-6" />
+            </a>
+          )}
+        </div>
       </div>
 
       {/* Description section */}

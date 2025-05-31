@@ -32,10 +32,10 @@ export default function AboutPage() {
           <section className="bg-white/5 rounded-2xl p-8 backdrop-blur-sm">
             <h2 className="text-3xl font-bold mb-4 text-green-400">Who I Am</h2>
             <p className="text-gray-300 mb-4">
-              I&apos;m a versatile Product Manager with over six years of experience in both B2B and B2C environments.
+              I&apos;m a product leader passionate about scaling and managing complex systems. With seven years of experience in B2B and B2C, I specialize in transforming intricate technical challenges into elegant, practical solutions.
             </p>
             <p className="text-gray-300">
-              My unique expertise lies in extreme communication and responsiveness, cross-functional collaboration, and excellence in execution. I bring a robust technical background, high proficiency in developing data-focused solutions and handling complex business algorithms, and a keen eye for detail and user experience.
+              I have a strong technical background and a hands-on approach, allowing me to bridge the gap between intricate details and strategic vision. I&apos;m obsessed with productivity and innovation, constantly seeking new topics to learn and innovative challenges to take on.
             </p>
           </section>
 
@@ -43,16 +43,16 @@ export default function AboutPage() {
             <h2 className="text-3xl font-bold mb-4 text-green-400">My Professional Journey</h2>
             <div className="space-y-4">
               <p className="text-gray-300">
-                I currently lead two Product Teams at Port (B2B SaaS), building an internal developer portal to improve developer experience. With over seven years of experience as a Product Manager, I&apos;m always looking for ways to become more efficient and optimize my work. My passion lies in scaling, launching, and executing complex products that deliver value.
+                I currently lead AI initiatives and product teams at Port, building internal developer portals that transform how engineering teams work. I launched one of the first AI agents and MCP server in that space along with my amazing team. With seven years of product management experience, I focus on executing complex products that deliver measurable value and drive clear business outcomes.
               </p>
               <p className="text-gray-300">
-                Before Port, I worked at Lusha (B2B SaaS), where I led scalable platform and infrastructure initiatives. I launched two major infrastructure upgrades that reduced maintenance costs by 30% and supported company growth.
+                Before Port, I worked at Lusha, where I led scalable platform and infrastructure initiatives. I launched two major infrastructure upgrades that reduced maintenance costs by 30% and supported company growth.
               </p>
               <p className="text-gray-300">
-                Prior to that, my main growth happened at theLotter, a lottery-gaming product, where I focused on the checkout area, processing $80M ARR, improving payment acceptance rates, integrating new vendors and payment options, and leading a new design system and site architecture.
+                Prior to that, I grew my expertise at theLotter, focusing on the checkout area processing $80M ARR. I improved payment acceptance rates, integrated new vendors and payment options, and led a comprehensive design system and site architecture overhaul.
               </p>
               <p className="text-gray-300">
-                Throughout my career, I&apos;ve been driven by a desire to enhance efficiency and deliver impactful solutions. I&apos;m excited to continue this journey at Port, contributing to the next generation of developer experience.
+                Throughout my career, I&apos;ve been driven by a desire to enhance efficiency and deliver impactful solutions that solve real problems for users and businesses.
               </p>
             </div>
           </section>
@@ -62,23 +62,23 @@ export default function AboutPage() {
               <h2 className="text-3xl font-bold mb-4 text-green-400">Philosophy and Approach</h2>
               <div className="space-y-4 text-gray-300">
                 <p>
-                  My approach to product management is based on the belief that great products come from strategic vision and careful execution.
+                  My approach centers on listening deeply to users, cutting through the noise, and relentlessly focusing on shipping products that deliver real value.
                 </p>
                 <p>
-                  I strongly support user-centered design and data-driven decision-making, ensuring that every feature and enhancement aligns with our users&apos; goals and challenges.
+                  I believe in data-driven decision-making and strategic execution, ensuring every feature aligns with user needs and business objectives.
                 </p>
                 <p>
-                  Collaboration is central to my process, as I believe the best solutions arise from diverse perspectives and open communication.
+                  Collaboration drives my process - the best solutions emerge from diverse perspectives and clear communication across teams.
                 </p>
               </div>
             </div>
             <div className="bg-white/5 rounded-2xl p-8 backdrop-blur-sm">
               <h2 className="text-3xl font-bold mb-4 text-green-400">Vision for the Future</h2>
               <p className="text-gray-300 mb-4">
-                I am excited about the future of technology and its potential to transform businesses.
+                I&apos;m amazed by the power of AI and do my best to integrate it into my daily tasks, work processes, and product development.
               </p>
               <p className="text-gray-300">
-                I aim to continue driving innovation in product management, leveraging emerging trends and technologies to create impactful solutions that empower users and drive growth.
+                I&apos;m looking forward to seeing how technology and products continue to change and evolve, particularly as AI transforms how we build and scale complex systems.
               </p>
             </div>
           </section>

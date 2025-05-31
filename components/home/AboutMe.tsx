@@ -67,10 +67,10 @@ export function AboutMe() {
             <div key="about-content">
               <h2 key="about-title" className="text-3xl font-bold mb-6">About Me</h2>
               <p key="about-p1" className="text-gray-300 mb-4">
-                Passionate about problem-solving, especially tackling challenges that haven&apos;t been elegantly solved. With a strong background in data analysis and technical expertise, I bridge the gap between hands-on work and effective project leadership. I am known for outstanding execution and communication skills.
+                I&apos;m a product leader passionate about scaling and managing complex systems. With extensive experience in B2B SaaS, I specialize in transforming intricate technical challenges into elegant, practical solutions. My core philosophy is to listen deeply to users, cut through the noise, and relentlessly focus on shipping products that deliver real value and drive tangible business outcomes.
               </p>
               <p key="about-p2" className="text-gray-300">
-                Obsessed with efficiency, I&apos;ve developed a unique framework that helps me adapt and drive progress swiftly while maintaining focus and a positive outlook.
+                I have a strong technical background and a hands-on approach, allowing me to bridge the gap between intricate details and strategic vision. I&apos;m obsessed with productivity and innovation, constantly seeking new topics to learn and innovative challenges to take on.
               </p>
             </div>
             <div key="about-image" className="relative flex justify-center items-center" ref={imageRef}>
