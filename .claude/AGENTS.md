@@ -86,6 +86,7 @@ app/
 ├── page.tsx           # Homepage with all sections
 ├── about/page.tsx     # About page
 ├── projects/page.tsx  # Projects listing
+├── content/page.tsx   # Content hub (blog posts)
 ├── roles/             # Detailed role pages
 │   ├── recruitment-hr-system/
 │   └── lottery-finance-platform/
@@ -102,7 +103,22 @@ components/
 ├── shared/            # Shared components
 │   ├── Header.tsx
 │   └── Footer.tsx
+├── content/           # Content page components
+│   ├── ContentCard.tsx
+│   ├── ContentFilters.tsx
+│   ├── Pagination.tsx
+│   └── TagChip.tsx
 └── projects/          # Project components
+
+data/
+└── content.ts         # Content entries (57 posts)
+
+types/
+└── content.ts         # ContentItem, ContentTag types
+
+lib/
+├── utils.ts           # General utilities
+└── contentUtils.ts    # Tag assignment helpers
 ```
 
 **Tech Stack:**
@@ -112,28 +128,32 @@ components/
 - Framer Motion (animations)
 - TypeScript
 
-### 5. Content Hub Vision
+**Dev Server:** Port 2500 (`npm run dev`)
 
-This site is evolving into a **central content hub**. The vision includes:
+### 5. Content Hub (Implemented)
 
-1. **Content Categories**:
-   - Thought Leadership: Philosophical, high-level idea pieces
-   - Practical Guides: Workflows, how-tos, tactical content
-   - External Content: Aggregated links to podcasts, LinkedIn, company blogs
+The Content page (`/content`) is now live with:
 
-2. **Content Sources**:
-   - Substack (primary blogging platform)
-   - LinkedIn posts
-   - Port company blog
-   - Podcast appearances
-   - Conference talks
+1. **Tags** (5 categories):
+   - `AI` - AI, GenAI, LLMs, agents, MCP
+   - `Engineering` - Code, architecture, APIs, testing
+   - `Product` - Product management, OKRs, stakeholders
+   - `Productivity` - Workflows, efficiency, Kanban
+   - `Analysis` - Metrics, data, risk, decisions
 
-3. **Site as Aggregator**:
-   - Summaries/teasers on site, full content links to source
-   - Filtering by category
-   - Comprehensive resource showcase
+2. **Features**:
+   - Search across titles, subtitles, and tags
+   - Multi-select tag filtering
+   - Pagination (9 items per page)
+   - Responsive grid (1/2/3 columns)
+   - Cards link to Substack (external)
 
-See [roadmap/content-hub-vision.md](roadmap/content-hub-vision.md) for the full plan.
+3. **Adding Content**:
+   - See [tasks/add-content/INSTRUCTIONS.md](tasks/add-content/INSTRUCTIONS.md)
+   - Add entries to `data/content.ts`
+   - Use 1-3 tags per post
+
+See [roadmap/content-hub-vision.md](roadmap/content-hub-vision.md) for future enhancements.
 
 ### 6. Self-Learning Protocol
 
@@ -145,8 +165,8 @@ After completing a task and receiving feedback:
 
 ## Quick Start Examples
 
-**User says**: "I want to add a new content piece"
-**You do**: Load [tasks/add-content/INSTRUCTIONS.md](tasks/add-content/INSTRUCTIONS.md), ask about the content type and source
+**User says**: "Add this to my content" or "I want to add a new content piece"
+**You do**: Load [tasks/add-content/INSTRUCTIONS.md](tasks/add-content/INSTRUCTIONS.md), gather details (title, subtitle, URL, date, tags), add to `data/content.ts`
 
 **User says**: "I appeared on a podcast"
 **You do**: Load [tasks/add-media-appearance/INSTRUCTIONS.md](tasks/add-media-appearance/INSTRUCTIONS.md), gather podcast details
