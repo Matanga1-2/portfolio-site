@@ -5,6 +5,8 @@ export type ContentTag =
   | 'AI'
   | 'Analysis'
 
+export type ContentSource = 'Blog' | 'Port' | 'TheNewStack'
+
 export interface ContentItem {
   id: string
   title: string
@@ -13,4 +15,5 @@ export interface ContentItem {
   formattedDate: string
   tags: ContentTag[]
   url: string
+  source: ContentSource
 }

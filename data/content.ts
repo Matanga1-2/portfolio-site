@@ -1,6 +1,58 @@
 import { ContentItem } from '@/types/content'
 
 export const contentData: ContentItem[] = [
+  // === Port Blog Posts ===
+  {
+    id: 'introducing-port-ai-assistant',
+    title: 'Introducing Port AI assistant',
+    subtitle: 'Your intelligent partner for uncovering insights across your software delivery lifecycle and guiding platform building.',
+    date: new Date('2025-12-04T10:00:00.000Z'),
+    formattedDate: 'Dec 4, 2025',
+    tags: ['AI'],
+    url: 'https://www.port.io/blog/introducing-port-ai-assistant',
+    source: 'Port'
+  },
+  {
+    id: 'ai-engineering-intelligence-measuring-agentic-impact-roi',
+    title: 'AI + Engineering intelligence: Measuring agentic impact and ROI',
+    subtitle: 'How to adjust your measurement strategies in the AI era with Port.',
+    date: new Date('2025-11-24T10:00:00.000Z'),
+    formattedDate: 'Nov 24, 2025',
+    tags: ['AI', 'Analysis'],
+    url: 'https://www.port.io/blog/ai-engineering-intelligence-measuring-agentic-impact-roi',
+    source: 'Port'
+  },
+  {
+    id: 'how-to-implement-and-track-dora-metrics',
+    title: 'How to implement and track DORA metrics in your organization',
+    subtitle: 'Centralizing DORA metrics collection from git providers, CI/CD pipelines, and incident management tools.',
+    date: new Date('2025-10-21T10:00:00.000Z'),
+    formattedDate: 'Oct 21, 2025',
+    tags: ['Engineering', 'Analysis'],
+    url: 'https://www.port.io/blog/how-to-implement-and-track-dora-metrics-in-your-organization',
+    source: 'Port'
+  },
+  {
+    id: 'integrate-software-catalog-port-mcp-server',
+    title: 'Integrate your software catalog into every workflow: Introducing the Port MCP Server',
+    subtitle: 'Access your software catalog and take actions through AI-powered tools using natural language queries.',
+    date: new Date('2025-06-05T10:00:00.000Z'),
+    formattedDate: 'Jun 5, 2025',
+    tags: ['AI', 'Engineering'],
+    url: 'https://www.port.io/blog/integrate-software-catalog-every-workflow-port-mcp-server',
+    source: 'Port'
+  },
+  {
+    id: 'introducing-ai-agents-in-port',
+    title: 'Introducing AI agents in Port',
+    subtitle: 'Extending the internal developer portal to become a unified hub for running AI agents safely.',
+    date: new Date('2025-05-30T10:00:00.000Z'),
+    formattedDate: 'May 30, 2025',
+    tags: ['AI'],
+    url: 'https://www.port.io/blog/ai-agents-port',
+    source: 'Port'
+  },
+  // === Blog Posts ===
   {
     id: '57-on-context-engineering',
     title: '#57 - On Context Engineering',
@@ -8,7 +60,8 @@ export const contentData: ContentItem[] = [
     date: new Date('2025-08-13T07:05:05.260Z'),
     formattedDate: 'Aug 13, 2025',
     tags: ['AI', 'Engineering'],
-    url: 'https://blog.matangr.com/p/57-on-context-engineering'
+    url: 'https://blog.matangr.com/p/57-on-context-engineering',
+    source: 'Blog'
   },
   {
     id: '56-my-ai-agent-required-more-engineering',
@@ -17,7 +70,8 @@ export const contentData: ContentItem[] = [
     date: new Date('2025-07-22T14:55:32.229Z'),
     formattedDate: 'Jul 22, 2025',
     tags: ['AI', 'Engineering'],
-    url: 'https://blog.matangr.com/p/my-ai-agent-required-more-engineering'
+    url: 'https://blog.matangr.com/p/my-ai-agent-required-more-engineering',
+    source: 'Blog'
   },
   {
     id: '55-domain-driven-ai',
@@ -26,7 +80,8 @@ export const contentData: ContentItem[] = [
     date: new Date('2025-07-10T20:48:52.120Z'),
     formattedDate: 'Jul 10, 2025',
     tags: ['AI', 'Engineering'],
-    url: 'https://blog.matangr.com/p/domain-driven-ai'
+    url: 'https://blog.matangr.com/p/domain-driven-ai',
+    source: 'Blog'
   },
   {
     id: '54-building-my-first-google-sheets-add',
@@ -35,7 +90,8 @@ export const contentData: ContentItem[] = [
     date: new Date('2025-05-27T20:12:56.238Z'),
     formattedDate: 'May 27, 2025',
     tags: ['Engineering'],
-    url: 'https://blog.matangr.com/p/building-my-first-google-sheets-add'
+    url: 'https://blog.matangr.com/p/building-my-first-google-sheets-add',
+    source: 'Blog'
   },
   {
     id: '53-building-an-mcp-server',
@@ -44,7 +100,8 @@ export const contentData: ContentItem[] = [
     date: new Date('2025-03-11T18:46:02.623Z'),
     formattedDate: 'Mar 11, 2025',
     tags: ['AI', 'Engineering'],
-    url: 'https://blog.matangr.com/p/53-building-an-mcp-server'
+    url: 'https://blog.matangr.com/p/53-building-an-mcp-server',
+    source: 'Blog'
   },
   {
     id: '52-wearing-a-developers-hat-for-a-few',
@@ -53,7 +110,8 @@ export const contentData: ContentItem[] = [
     date: new Date('2025-01-26T12:46:58.520Z'),
     formattedDate: 'Jan 26, 2025',
     tags: ['Engineering'],
-    url: 'https://blog.matangr.com/p/wearing-a-developers-hat-for-a-few'
+    url: 'https://blog.matangr.com/p/wearing-a-developers-hat-for-a-few',
+    source: 'Blog'
   },
   {
     id: '51-succeed-by-taking-one-step-at',
@@ -62,7 +120,8 @@ export const contentData: ContentItem[] = [
     date: new Date('2025-01-07T06:41:35.500Z'),
     formattedDate: 'Jan 7, 2025',
     tags: ['Productivity'],
-    url: 'https://blog.matangr.com/p/51-succeed-by-taking-one-step-at'
+    url: 'https://blog.matangr.com/p/51-succeed-by-taking-one-step-at',
+    source: 'Blog'
   },
   {
     id: '55-small-doesnt-mean-fast',
@@ -71,7 +130,8 @@ export const contentData: ContentItem[] = [
     date: new Date('2025-12-01T18:28:25.049Z'),
     formattedDate: 'Dec 1, 2025',
     tags: ['Engineering', 'Product'],
-    url: 'https://blog.matangr.com/p/55-small-doesnt-mean-fast'
+    url: 'https://blog.matangr.com/p/55-small-doesnt-mean-fast',
+    source: 'Blog'
   },
   {
     id: '50-is-ai-a-faster-horse-or-the-next',
@@ -80,7 +140,19 @@ export const contentData: ContentItem[] = [
     date: new Date('2024-12-18T20:19:20.847Z'),
     formattedDate: 'Dec 18, 2024',
     tags: ['AI'],
-    url: 'https://blog.matangr.com/p/50-is-ai-a-faster-horse-or-the-next'
+    url: 'https://blog.matangr.com/p/50-is-ai-a-faster-horse-or-the-next',
+    source: 'Blog'
+  },
+  // === TheNewStack ===
+  {
+    id: 'how-to-track-dora-metrics-internal-developer-portal',
+    title: 'How To Track DORA Metrics in an Internal Developer Portal',
+    subtitle: 'Using an internal developer portal to centralize DORA metrics from git providers, CI/CD pipelines, and incident tools.',
+    date: new Date('2024-11-14T10:00:00.000Z'),
+    formattedDate: 'Nov 14, 2024',
+    tags: ['Engineering', 'Analysis'],
+    url: 'https://thenewstack.io/how-to-track-dora-metrics-in-an-internal-developer-portal/',
+    source: 'TheNewStack'
   },
   {
     id: '49-how-i-reduced-costs-by-85-using-ai',
@@ -89,7 +161,8 @@ export const contentData: ContentItem[] = [
     date: new Date('2024-12-02T07:03:22.416Z'),
     formattedDate: 'Dec 2, 2024',
     tags: ['AI'],
-    url: 'https://blog.matangr.com/p/how-i-reduced-costs-by-85-using-ai'
+    url: 'https://blog.matangr.com/p/how-i-reduced-costs-by-85-using-ai',
+    source: 'Blog'
   },
   {
     id: '48-testing-culture',
@@ -98,7 +171,8 @@ export const contentData: ContentItem[] = [
     date: new Date('2024-11-13T20:21:02.093Z'),
     formattedDate: 'Nov 13, 2024',
     tags: ['Engineering'],
-    url: 'https://blog.matangr.com/p/48-testing-culture'
+    url: 'https://blog.matangr.com/p/48-testing-culture',
+    source: 'Blog'
   },
   {
     id: '47-efficient-data-management-strategies',
@@ -107,7 +181,8 @@ export const contentData: ContentItem[] = [
     date: new Date('2024-11-05T20:20:02.436Z'),
     formattedDate: 'Nov 5, 2024',
     tags: ['Engineering', 'Productivity', 'Analysis'],
-    url: 'https://blog.matangr.com/p/47-efficient-data-management-strategies'
+    url: 'https://blog.matangr.com/p/47-efficient-data-management-strategies',
+    source: 'Blog'
   },
   {
     id: '46-managing-incidents-in-code-and',
@@ -116,7 +191,8 @@ export const contentData: ContentItem[] = [
     date: new Date('2024-10-20T19:58:55.638Z'),
     formattedDate: 'Oct 20, 2024',
     tags: ['Engineering', 'Analysis'],
-    url: 'https://blog.matangr.com/p/46-managing-incidents-in-code-and'
+    url: 'https://blog.matangr.com/p/46-managing-incidents-in-code-and',
+    source: 'Blog'
   },
   {
     id: '45-keeping-okrs-relevant-with-virtual',
@@ -125,7 +201,8 @@ export const contentData: ContentItem[] = [
     date: new Date('2024-10-14T07:02:48.520Z'),
     formattedDate: 'Oct 14, 2024',
     tags: ['Product', 'Productivity'],
-    url: 'https://blog.matangr.com/p/45-keeping-okrs-relevant-with-virtual'
+    url: 'https://blog.matangr.com/p/45-keeping-okrs-relevant-with-virtual',
+    source: 'Blog'
   },
   {
     id: '44-learning-from-the-past-with-decision',
@@ -134,7 +211,8 @@ export const contentData: ContentItem[] = [
     date: new Date('2024-10-09T20:52:59.638Z'),
     formattedDate: 'Oct 9, 2024',
     tags: ['Engineering', 'Product', 'Analysis'],
-    url: 'https://blog.matangr.com/p/44-learning-from-the-past-with-decision'
+    url: 'https://blog.matangr.com/p/44-learning-from-the-past-with-decision',
+    source: 'Blog'
   },
   {
     id: '43-risk-metrics-before-success-metrics',
@@ -143,7 +221,8 @@ export const contentData: ContentItem[] = [
     date: new Date('2024-10-04T19:51:55.550Z'),
     formattedDate: 'Oct 4, 2024',
     tags: ['Analysis'],
-    url: 'https://blog.matangr.com/p/43-risk-metrics-before-success-metrics'
+    url: 'https://blog.matangr.com/p/43-risk-metrics-before-success-metrics',
+    source: 'Blog'
   },
   {
     id: '42-breaking-down-metrics-to-build',
@@ -152,7 +231,8 @@ export const contentData: ContentItem[] = [
     date: new Date('2024-09-23T13:57:25.374Z'),
     formattedDate: 'Sep 23, 2024',
     tags: ['Product', 'Analysis'],
-    url: 'https://blog.matangr.com/p/42-breaking-down-metrics-to-build'
+    url: 'https://blog.matangr.com/p/42-breaking-down-metrics-to-build',
+    source: 'Blog'
   },
   {
     id: '41-decision-making-without-full-context',
@@ -161,7 +241,8 @@ export const contentData: ContentItem[] = [
     date: new Date('2024-09-15T07:35:46.205Z'),
     formattedDate: 'Sep 15, 2024',
     tags: ['Engineering', 'Product', 'Analysis'],
-    url: 'https://blog.matangr.com/p/41-decision-making-without-full-context'
+    url: 'https://blog.matangr.com/p/41-decision-making-without-full-context',
+    source: 'Blog'
   },
   {
     id: '40-context-in-software-design',
@@ -170,7 +251,8 @@ export const contentData: ContentItem[] = [
     date: new Date('2024-09-08T19:32:31.854Z'),
     formattedDate: 'Sep 8, 2024',
     tags: ['Engineering', 'Product', 'Analysis'],
-    url: 'https://blog.matangr.com/p/40-context-in-software-design'
+    url: 'https://blog.matangr.com/p/40-context-in-software-design',
+    source: 'Blog'
   },
   {
     id: '39-event-driven-tracking',
@@ -179,7 +261,8 @@ export const contentData: ContentItem[] = [
     date: new Date('2024-08-20T19:50:29.893Z'),
     formattedDate: 'Aug 20, 2024',
     tags: ['Engineering', 'Analysis'],
-    url: 'https://blog.matangr.com/p/39-event-driven-tracking'
+    url: 'https://blog.matangr.com/p/39-event-driven-tracking',
+    source: 'Blog'
   },
   {
     id: '38-golden-paths-for-efficiency',
@@ -188,7 +271,8 @@ export const contentData: ContentItem[] = [
     date: new Date('2024-08-12T19:25:40.539Z'),
     formattedDate: 'Aug 12, 2024',
     tags: ['Productivity'],
-    url: 'https://blog.matangr.com/p/38-golden-paths-for-efficiency'
+    url: 'https://blog.matangr.com/p/38-golden-paths-for-efficiency',
+    source: 'Blog'
   },
   {
     id: '37-idempotency-in-action',
@@ -197,7 +281,8 @@ export const contentData: ContentItem[] = [
     date: new Date('2024-08-05T09:07:01.175Z'),
     formattedDate: 'Aug 5, 2024',
     tags: ['Engineering'],
-    url: 'https://blog.matangr.com/p/37-idempotency-in-action'
+    url: 'https://blog.matangr.com/p/37-idempotency-in-action',
+    source: 'Blog'
   },
   {
     id: '36-online-vs-offline-approaches',
@@ -206,7 +291,8 @@ export const contentData: ContentItem[] = [
     date: new Date('2024-07-29T05:31:01.067Z'),
     formattedDate: 'Jul 29, 2024',
     tags: ['Engineering', 'Analysis'],
-    url: 'https://blog.matangr.com/p/36-online-vs-offline-approaches'
+    url: 'https://blog.matangr.com/p/36-online-vs-offline-approaches',
+    source: 'Blog'
   },
   {
     id: '35-lessons-from-api-communication',
@@ -215,7 +301,8 @@ export const contentData: ContentItem[] = [
     date: new Date('2024-07-17T14:40:00.496Z'),
     formattedDate: 'Jul 17, 2024',
     tags: ['Engineering'],
-    url: 'https://blog.matangr.com/p/35-lessons-from-api-communication'
+    url: 'https://blog.matangr.com/p/35-lessons-from-api-communication',
+    source: 'Blog'
   },
   {
     id: '34-enhancing-alignment-using-git',
@@ -224,7 +311,8 @@ export const contentData: ContentItem[] = [
     date: new Date('2024-07-15T06:00:36.811Z'),
     formattedDate: 'Jul 15, 2024',
     tags: ['Engineering', 'Product'],
-    url: 'https://blog.matangr.com/p/34-enhancing-alignment-using-git'
+    url: 'https://blog.matangr.com/p/34-enhancing-alignment-using-git',
+    source: 'Blog'
   },
   {
     id: '33-high-availability-patterns-explained',
@@ -233,7 +321,8 @@ export const contentData: ContentItem[] = [
     date: new Date('2024-07-04T12:58:58.051Z'),
     formattedDate: 'Jul 4, 2024',
     tags: ['Engineering'],
-    url: 'https://blog.matangr.com/p/33-high-availability-patterns-explained'
+    url: 'https://blog.matangr.com/p/33-high-availability-patterns-explained',
+    source: 'Blog'
   },
   {
     id: '32-optimizing-interactions-with-genai',
@@ -242,7 +331,8 @@ export const contentData: ContentItem[] = [
     date: new Date('2024-06-30T19:15:55.837Z'),
     formattedDate: 'Jun 30, 2024',
     tags: ['AI'],
-    url: 'https://blog.matangr.com/p/optimizing-interactions-with-genai'
+    url: 'https://blog.matangr.com/p/optimizing-interactions-with-genai',
+    source: 'Blog'
   },
   {
     id: '31-micro-frontend-inspired-dependency',
@@ -251,7 +341,8 @@ export const contentData: ContentItem[] = [
     date: new Date('2024-06-26T18:06:45.476Z'),
     formattedDate: 'Jun 26, 2024',
     tags: ['Engineering', 'Product'],
-    url: 'https://blog.matangr.com/p/micro-frontend-inspired-dependency'
+    url: 'https://blog.matangr.com/p/micro-frontend-inspired-dependency',
+    source: 'Blog'
   },
   {
     id: '30-the-power-of-pulling',
@@ -260,7 +351,8 @@ export const contentData: ContentItem[] = [
     date: new Date('2024-01-14T07:09:30.868Z'),
     formattedDate: 'Jan 14, 2024',
     tags: ['Engineering', 'Productivity'],
-    url: 'https://blog.matangr.com/p/30-the-power-of-pulling'
+    url: 'https://blog.matangr.com/p/30-the-power-of-pulling',
+    source: 'Blog'
   },
   {
     id: '29-vectorized-communication',
@@ -269,7 +361,8 @@ export const contentData: ContentItem[] = [
     date: new Date('2023-09-27T06:16:52.465Z'),
     formattedDate: 'Sep 27, 2023',
     tags: ['Engineering', 'Analysis'],
-    url: 'https://blog.matangr.com/p/29-vectorized-communication'
+    url: 'https://blog.matangr.com/p/29-vectorized-communication',
+    source: 'Blog'
   },
   {
     id: '28-how-technical-tradeoffs-shape',
@@ -278,7 +371,8 @@ export const contentData: ContentItem[] = [
     date: new Date('2023-09-16T18:19:20.090Z'),
     formattedDate: 'Sep 16, 2023',
     tags: ['Engineering', 'Product', 'Analysis'],
-    url: 'https://blog.matangr.com/p/28-how-technical-tradeoffs-shape'
+    url: 'https://blog.matangr.com/p/28-how-technical-tradeoffs-shape',
+    source: 'Blog'
   },
   {
     id: '27-monitor-inefficiencies',
@@ -287,7 +381,8 @@ export const contentData: ContentItem[] = [
     date: new Date('2023-09-07T17:59:50.681Z'),
     formattedDate: 'Sep 7, 2023',
     tags: ['Productivity', 'Analysis'],
-    url: 'https://blog.matangr.com/p/27-monitor-inefficiencies'
+    url: 'https://blog.matangr.com/p/27-monitor-inefficiencies',
+    source: 'Blog'
   },
   {
     id: '26-apis-inspired-dependencies-management',
@@ -296,7 +391,8 @@ export const contentData: ContentItem[] = [
     date: new Date('2023-08-22T11:15:26.477Z'),
     formattedDate: 'Aug 22, 2023',
     tags: ['Engineering', 'Product'],
-    url: 'https://blog.matangr.com/p/26-apis-inspired-dependencies-management'
+    url: 'https://blog.matangr.com/p/26-apis-inspired-dependencies-management',
+    source: 'Blog'
   },
   {
     id: 'three-effective-ways-to-break-deadlocks-1f1f677e433e',
@@ -305,7 +401,8 @@ export const contentData: ContentItem[] = [
     date: new Date('2023-07-19T06:43:13.528Z'),
     formattedDate: 'Jul 19, 2023',
     tags: ['Engineering', 'Product'],
-    url: 'https://blog.matangr.com/p/three-effective-ways-to-break-deadlocks-1f1f677e433e'
+    url: 'https://blog.matangr.com/p/three-effective-ways-to-break-deadlocks-1f1f677e433e',
+    source: 'Blog'
   },
   {
     id: '3-techniques-to-measure-product-debt-2e58de3f5345',
@@ -314,7 +411,8 @@ export const contentData: ContentItem[] = [
     date: new Date('2023-05-30T06:24:10.239Z'),
     formattedDate: 'May 30, 2023',
     tags: ['Product', 'Analysis'],
-    url: 'https://blog.matangr.com/p/3-techniques-to-measure-product-debt-2e58de3f5345'
+    url: 'https://blog.matangr.com/p/3-techniques-to-measure-product-debt-2e58de3f5345',
+    source: 'Blog'
   },
   {
     id: 'cache-inspired-knowledge-management-6cea463cb530',
@@ -323,7 +421,8 @@ export const contentData: ContentItem[] = [
     date: new Date('2023-05-23T06:11:46.972Z'),
     formattedDate: 'May 23, 2023',
     tags: ['Engineering', 'Productivity'],
-    url: 'https://blog.matangr.com/p/cache-inspired-knowledge-management-6cea463cb530'
+    url: 'https://blog.matangr.com/p/cache-inspired-knowledge-management-6cea463cb530',
+    source: 'Blog'
   },
   {
     id: 'applying-conways-law-navigating-the-build-vs-buy-dilemma-5b4d80b34091',
@@ -332,7 +431,8 @@ export const contentData: ContentItem[] = [
     date: new Date('2023-05-15T06:40:20.506Z'),
     formattedDate: 'May 15, 2023',
     tags: ['Engineering', 'Product'],
-    url: 'https://blog.matangr.com/p/applying-conways-law-navigating-the-build-vs-buy-dilemma-5b4d80b34091'
+    url: 'https://blog.matangr.com/p/applying-conways-law-navigating-the-build-vs-buy-dilemma-5b4d80b34091',
+    source: 'Blog'
   },
   {
     id: 'using-citizenship-and-subdomains-to-improve-decision-making-fe98cd0fe7ba',
@@ -341,7 +441,8 @@ export const contentData: ContentItem[] = [
     date: new Date('2023-04-23T06:12:00.226Z'),
     formattedDate: 'Apr 23, 2023',
     tags: ['Product'],
-    url: 'https://blog.matangr.com/p/using-citizenship-and-subdomains-to-improve-decision-making-fe98cd0fe7ba'
+    url: 'https://blog.matangr.com/p/using-citizenship-and-subdomains-to-improve-decision-making-fe98cd0fe7ba',
+    source: 'Blog'
   },
   {
     id: 'the-story-of-alignment-75ac489f3225',
@@ -350,7 +451,8 @@ export const contentData: ContentItem[] = [
     date: new Date('2023-02-24T20:26:35.619Z'),
     formattedDate: 'Feb 24, 2023',
     tags: ['Product'],
-    url: 'https://blog.matangr.com/p/the-story-of-alignment-75ac489f3225'
+    url: 'https://blog.matangr.com/p/the-story-of-alignment-75ac489f3225',
+    source: 'Blog'
   },
   {
     id: 'more-with-less-resourcefulness-pt-3-6a7526c6a090',
@@ -359,7 +461,8 @@ export const contentData: ContentItem[] = [
     date: new Date('2023-02-08T07:40:18.672Z'),
     formattedDate: 'Feb 8, 2023',
     tags: ['Productivity'],
-    url: 'https://blog.matangr.com/p/more-with-less-resourcefulness-pt-3-6a7526c6a090'
+    url: 'https://blog.matangr.com/p/more-with-less-resourcefulness-pt-3-6a7526c6a090',
+    source: 'Blog'
   },
   {
     id: 'more-with-less-focus-on-impact-pt-2-5afb869094b1',
@@ -368,7 +471,8 @@ export const contentData: ContentItem[] = [
     date: new Date('2023-01-09T03:43:10.935Z'),
     formattedDate: 'Jan 9, 2023',
     tags: ['Productivity'],
-    url: 'https://blog.matangr.com/p/more-with-less-focus-on-impact-pt-2-5afb869094b1'
+    url: 'https://blog.matangr.com/p/more-with-less-focus-on-impact-pt-2-5afb869094b1',
+    source: 'Blog'
   },
   {
     id: 'more-with-less-identify-waste-pt-1-of-3-468962716f80',
@@ -377,7 +481,8 @@ export const contentData: ContentItem[] = [
     date: new Date('2022-12-29T12:54:32.842Z'),
     formattedDate: 'Dec 29, 2022',
     tags: ['Productivity'],
-    url: 'https://blog.matangr.com/p/more-with-less-identify-waste-pt-1-of-3-468962716f80'
+    url: 'https://blog.matangr.com/p/more-with-less-identify-waste-pt-1-of-3-468962716f80',
+    source: 'Blog'
   },
   {
     id: 'sync-or-async-choosing-the-right-approach-fa8b14fa92eb',
@@ -386,7 +491,8 @@ export const contentData: ContentItem[] = [
     date: new Date('2022-12-21T11:53:46.189Z'),
     formattedDate: 'Dec 21, 2022',
     tags: ['Productivity'],
-    url: 'https://blog.matangr.com/p/sync-or-async-choosing-the-right-approach-fa8b14fa92eb'
+    url: 'https://blog.matangr.com/p/sync-or-async-choosing-the-right-approach-fa8b14fa92eb',
+    source: 'Blog'
   },
   {
     id: 'from-technical-debt-to-organizational-wealth-5679afe1c1df',
@@ -395,7 +501,8 @@ export const contentData: ContentItem[] = [
     date: new Date('2022-12-14T19:45:23.354Z'),
     formattedDate: 'Dec 14, 2022',
     tags: ['Engineering', 'Product'],
-    url: 'https://blog.matangr.com/p/from-technical-debt-to-organizational-wealth-5679afe1c1df'
+    url: 'https://blog.matangr.com/p/from-technical-debt-to-organizational-wealth-5679afe1c1df',
+    source: 'Blog'
   },
   {
     id: 'dont-forget-the-risk-metrics-da4df593d75e',
@@ -404,7 +511,8 @@ export const contentData: ContentItem[] = [
     date: new Date('2022-11-29T13:08:20.169Z'),
     formattedDate: 'Nov 29, 2022',
     tags: ['Analysis'],
-    url: 'https://blog.matangr.com/p/dont-forget-the-risk-metrics-da4df593d75e'
+    url: 'https://blog.matangr.com/p/dont-forget-the-risk-metrics-da4df593d75e',
+    source: 'Blog'
   },
   {
     id: 'focus-on-output-b73cd8fd2258',
@@ -413,7 +521,8 @@ export const contentData: ContentItem[] = [
     date: new Date('2022-11-17T05:51:08.815Z'),
     formattedDate: 'Nov 17, 2022',
     tags: ['Product'],
-    url: 'https://blog.matangr.com/p/focus-on-output-b73cd8fd2258'
+    url: 'https://blog.matangr.com/p/focus-on-output-b73cd8fd2258',
+    source: 'Blog'
   },
   {
     id: 'how-to-find-the-right-questions-b3b64c2be139',
@@ -422,7 +531,8 @@ export const contentData: ContentItem[] = [
     date: new Date('2022-10-30T10:57:04.167Z'),
     formattedDate: 'Oct 30, 2022',
     tags: ['Analysis'],
-    url: 'https://blog.matangr.com/p/how-to-find-the-right-questions-b3b64c2be139'
+    url: 'https://blog.matangr.com/p/how-to-find-the-right-questions-b3b64c2be139',
+    source: 'Blog'
   },
   {
     id: 'design-for-the-worst-case-40bc368f1861',
@@ -431,7 +541,8 @@ export const contentData: ContentItem[] = [
     date: new Date('2022-10-12T12:56:16.085Z'),
     formattedDate: 'Oct 12, 2022',
     tags: ['Product'],
-    url: 'https://blog.matangr.com/p/design-for-the-worst-case-40bc368f1861'
+    url: 'https://blog.matangr.com/p/design-for-the-worst-case-40bc368f1861',
+    source: 'Blog'
   },
   {
     id: 'event-driven-communication-cd86465de277',
@@ -440,7 +551,8 @@ export const contentData: ContentItem[] = [
     date: new Date('2022-09-08T03:11:42.627Z'),
     formattedDate: 'Sep 8, 2022',
     tags: ['Engineering'],
-    url: 'https://blog.matangr.com/p/event-driven-communication-cd86465de277'
+    url: 'https://blog.matangr.com/p/event-driven-communication-cd86465de277',
+    source: 'Blog'
   },
   {
     id: 'improve-efficiency-with-better-knowledge-management-cf064403b4e',
@@ -449,7 +561,8 @@ export const contentData: ContentItem[] = [
     date: new Date('2022-07-26T05:42:49.789Z'),
     formattedDate: 'Jul 26, 2022',
     tags: ['Productivity'],
-    url: 'https://blog.matangr.com/p/improve-efficiency-with-better-knowledge-management-cf064403b4e'
+    url: 'https://blog.matangr.com/p/improve-efficiency-with-better-knowledge-management-cf064403b4e',
+    source: 'Blog'
   },
   {
     id: 'to-add-or-not-to-add-d86b3cab3628',
@@ -458,7 +571,8 @@ export const contentData: ContentItem[] = [
     date: new Date('2022-07-17T08:52:45.835Z'),
     formattedDate: 'Jul 17, 2022',
     tags: ['Engineering', 'Product'],
-    url: 'https://blog.matangr.com/p/to-add-or-not-to-add-d86b3cab3628'
+    url: 'https://blog.matangr.com/p/to-add-or-not-to-add-d86b3cab3628',
+    source: 'Blog'
   },
   {
     id: '3-ways-to-improve-deep-work-a62041558203',
@@ -467,7 +581,8 @@ export const contentData: ContentItem[] = [
     date: new Date('2022-06-29T06:18:04.266Z'),
     formattedDate: 'Jun 29, 2022',
     tags: ['Productivity'],
-    url: 'https://blog.matangr.com/p/3-ways-to-improve-deep-work-a62041558203'
+    url: 'https://blog.matangr.com/p/3-ways-to-improve-deep-work-a62041558203',
+    source: 'Blog'
   },
   {
     id: 'how-to-plan-better-using-the-johari-window-b182a048f9f3',
@@ -476,7 +591,8 @@ export const contentData: ContentItem[] = [
     date: new Date('2022-06-21T18:37:24.771Z'),
     formattedDate: 'Jun 21, 2022',
     tags: ['Analysis'],
-    url: 'https://blog.matangr.com/p/how-to-plan-better-using-the-johari-window-b182a048f9f3'
+    url: 'https://blog.matangr.com/p/how-to-plan-better-using-the-johari-window-b182a048f9f3',
+    source: 'Blog'
   },
   {
     id: 'how-domain-driven-design-can-improve-collaboration-e4cc47f3b100',
@@ -485,7 +601,8 @@ export const contentData: ContentItem[] = [
     date: new Date('2022-06-12T09:49:14.213Z'),
     formattedDate: 'Jun 12, 2022',
     tags: ['Engineering', 'Product'],
-    url: 'https://blog.matangr.com/p/how-domain-driven-design-can-improve-collaboration-e4cc47f3b100'
+    url: 'https://blog.matangr.com/p/how-domain-driven-design-can-improve-collaboration-e4cc47f3b100',
+    source: 'Blog'
   },
   {
     id: 'inbox-zero-what-and-how-4cc191042015',
@@ -494,7 +611,8 @@ export const contentData: ContentItem[] = [
     date: new Date('2022-06-05T18:27:12.808Z'),
     formattedDate: 'Jun 5, 2022',
     tags: ['Productivity'],
-    url: 'https://blog.matangr.com/p/inbox-zero-what-and-how-4cc191042015'
+    url: 'https://blog.matangr.com/p/inbox-zero-what-and-how-4cc191042015',
+    source: 'Blog'
   },
   {
     id: 'noestimates-the-leaner-approach-68fd57bff644',
@@ -503,7 +621,8 @@ export const contentData: ContentItem[] = [
     date: new Date('2022-05-23T19:10:01.180Z'),
     formattedDate: 'May 23, 2022',
     tags: ['Productivity'],
-    url: 'https://blog.matangr.com/p/noestimates-the-leaner-approach-68fd57bff644'
+    url: 'https://blog.matangr.com/p/noestimates-the-leaner-approach-68fd57bff644',
+    source: 'Blog'
   },
   {
     id: 'why-you-need-to-code-434ee5ed7e3b',
@@ -512,7 +631,8 @@ export const contentData: ContentItem[] = [
     date: new Date('2022-05-22T05:28:39.960Z'),
     formattedDate: 'May 22, 2022',
     tags: ['Engineering', 'Product'],
-    url: 'https://blog.matangr.com/p/why-you-need-to-code-434ee5ed7e3b'
+    url: 'https://blog.matangr.com/p/why-you-need-to-code-434ee5ed7e3b',
+    source: 'Blog'
   },
   {
     id: '3-ways-to-improve-knowledge-sharing-5f80a406b0e0',
@@ -521,7 +641,8 @@ export const contentData: ContentItem[] = [
     date: new Date('2022-05-17T18:42:15.759Z'),
     formattedDate: 'May 17, 2022',
     tags: ['Productivity'],
-    url: 'https://blog.matangr.com/p/3-ways-to-improve-knowledge-sharing-5f80a406b0e0'
+    url: 'https://blog.matangr.com/p/3-ways-to-improve-knowledge-sharing-5f80a406b0e0',
+    source: 'Blog'
   }
 ]
 
