@@ -17,9 +17,9 @@ Use this task when Matan wants to:
 ## Content Page Overview
 
 The Content page (`/content`) displays all content in a searchable, filterable grid:
-- **Location**: [app/content/page.tsx](../../../app/content/page.tsx)
-- **Data file**: [data/content.ts](../../../data/content.ts)
-- **Components**: [components/content/](../../../components/content/)
+- **Location**: [app/content/page.tsx](../../app/content/page.tsx)
+- **Data file**: [data/content.ts](../../data/content.ts)
+- **Components**: [components/content/](../../components/content/)
 
 Features:
 - Search across titles, subtitles, and tags
@@ -59,7 +59,7 @@ Ask for:
 
 ### Step 2: Add to Data File
 
-Open [data/content.ts](../../../data/content.ts) and add a new entry to the `contentData` array:
+Open [data/content.ts](../../data/content.ts) and add a new entry to the `contentData` array:
 
 ```typescript
 {

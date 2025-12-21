@@ -9,18 +9,18 @@ At the start of EVERY new conversation:
 1. **Greet**: "Portfolio Assistant ready (Start-Protocol initiated)"
 
 2. **Load essential context**:
-   - [meta/MATAN-BIO.md](meta/MATAN-BIO.md) - Who Matan is
-   - [meta/SITE-OVERVIEW.md](meta/SITE-OVERVIEW.md) - Site structure and vision
-   - [reference/WRITING-GUIDELINES.md](reference/WRITING-GUIDELINES.md) - Writing standards
+   - [meta/MATAN-BIO.md](../meta/MATAN-BIO.md) - Who Matan is
+   - [meta/SITE-OVERVIEW.md](../meta/SITE-OVERVIEW.md) - Site structure and vision
+   - [meta/reference/WRITING-GUIDELINES.md](../meta/reference/WRITING-GUIDELINES.md) - Writing standards
 
-3. **Read the operating system**: [AGENTS.md](AGENTS.md)
+3. **Read the operating system**: [meta/AGENTS.md](../meta/AGENTS.md)
    - This is your source of truth for all task routing and workflows
 
 4. **Confirm readiness** and proceed
 
 ## One-Stop Shop
 
-[AGENTS.md](AGENTS.md) is the complete operating system. It contains:
+[meta/AGENTS.md](../meta/AGENTS.md) is the complete operating system. It contains:
 - Session Start Protocol details
 - All available tasks and instructions
 - Content management workflows
