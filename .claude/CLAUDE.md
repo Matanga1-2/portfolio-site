@@ -29,6 +29,48 @@ At the start of EVERY new conversation:
 
 **Do not duplicate AGENTS.md content here.** This file is just the entry point.
 
+## Claude Code Permissions
+
+Claude Code uses a three-tier settings hierarchy:
+
+1. **Global** (`~/.claude/settings.json`) - Applies to ALL projects
+2. **Project** (`.claude/settings.json` or `.claude/settings.local.json`) - This project only
+3. **Enterprise** - Organization-managed (not applicable here)
+
+### Adding Global Permissions
+
+To allow a tool globally (across all projects), add it to `~/.claude/settings.json`:
+
+```json
+{
+  "permissions": {
+    "allow": [
+      "Read",
+      "Glob",
+      "Grep",
+      "WebSearch",
+      "WebFetch"
+    ]
+  }
+}
+```
+
+**Safe for global allow (read-only):**
+- `Read`, `Glob`, `Grep` - File reading/searching
+- `WebSearch`, `WebFetch` - Web access
+- MCP read tools: `mcp__slack__slack_get_*`, `mcp__port__list_*`, `mcp__port__get_*`
+
+**Keep project-specific (can modify things):**
+- `Write`, `Edit` - File modifications
+- `Bash` - Shell commands (use patterns like `Bash(git push:*)` for specific commands)
+
+### This Project's Settings
+
+Local permissions in `.claude/settings.local.json`:
+- `Bash(git push:*)` - Allow git push without approval
+
+Global permissions (from `~/.claude/settings.json`) also apply here.
+
 ---
 
 **Site**: Matan Grady's Personal Portfolio
