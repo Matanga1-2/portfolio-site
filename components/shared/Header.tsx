@@ -9,7 +9,7 @@ export function Header() {
           <nav className="flex space-x-2">
             <Link key="about-link" href="/about" className="text-sm md:text-base font-medium text-gray-300 hover:text-green-400 transition-colors px-2 md:px-3 py-1 md:py-2">About</Link>
             <Link key="projects-link" href="/projects" className="text-sm md:text-base font-medium text-gray-300 hover:text-green-400 transition-colors px-2 md:px-3 py-1 md:py-2">Projects</Link>
-            <Link key="blog-link" href="https://blog.matangr.com/" className="text-sm md:text-base font-medium text-gray-300 hover:text-green-400 transition-colors px-2 md:px-3 py-1 md:py-2">Blog</Link>
+            <Link key="content-link" href="/content" className="text-sm md:text-base font-medium text-gray-300 hover:text-green-400 transition-colors px-2 md:px-3 py-1 md:py-2">Content</Link>
           </nav>
         </div>
       </div>
