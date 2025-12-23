@@ -74,5 +74,5 @@ Global permissions (from `~/.claude/settings.json`) also apply here.
 ---
 
 **Site**: Matan Grady's Personal Portfolio
-**Tech Stack**: Next.js 14, React, Tailwind CSS, Framer Motion
+**Tech Stack**: Vite, React 18, React Router, Tailwind CSS, shadcn/ui, Framer Motion
 **Purpose**: Central hub for professional content, thought leadership, and portfolio showcase

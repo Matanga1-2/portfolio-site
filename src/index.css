@@ -1,0 +1,208 @@
+@import "@fontsource/jetbrains-mono/400.css";
+@import "@fontsource/jetbrains-mono/500.css";
+@import "@fontsource/jetbrains-mono/700.css";
+@import "@fontsource/inter/400.css";
+@import "@fontsource/inter/500.css";
+@import "@fontsource/inter/600.css";
+@import "@fontsource/inter/700.css";
+@import "@fontsource/space-mono/400.css";
+@import "@fontsource/space-mono/700.css";
+@import "@fontsource/instrument-serif/400.css";
+@import "@fontsource/instrument-serif/400-italic.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Theme Variables */
+@layer base {
+  :root {
+    /* Terminal Theme (Theme 1) - Default */
+    --background: 215 28% 5%;
+    --foreground: 0 0% 85%;
+    --card: 215 25% 8%;
+    --card-foreground: 0 0% 85%;
+    --popover: 215 25% 8%;
+    --popover-foreground: 0 0% 85%;
+    --primary: 135 73% 52%;
+    --primary-foreground: 215 28% 5%;
+    --secondary: 215 20% 12%;
+    --secondary-foreground: 0 0% 75%;
+    --muted: 215 20% 15%;
+    --muted-foreground: 215 10% 55%;
+    --accent: 135 73% 52%;
+    --accent-foreground: 215 28% 5%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 215 20% 18%;
+    --input: 215 20% 18%;
+    --ring: 135 73% 52%;
+    --radius: 0.25rem;
+
+    /* Terminal custom tokens */
+    --terminal-green: 135 73% 52%;
+    --terminal-cyan: 187 80% 55%;
+    --terminal-amber: 45 93% 58%;
+    --terminal-dim: 215 10% 45%;
+
+    /* Blueprint custom tokens */
+    --blueprint-navy: 220 43% 11%;
+    --blueprint-dark: 220 43% 8%;
+    --blueprint-cyan: 166 76% 68%;
+    --blueprint-line: 220 20% 25%;
+    --blueprint-text: 210 20% 90%;
+    --blueprint-dim: 220 15% 50%;
+
+    /* Editorial custom tokens */
+    --editorial-black: 0 0% 4%;
+    --editorial-charcoal: 0 0% 8%;
+    --editorial-gray: 0 0% 30%;
+    --editorial-muted: 0 0% 55%;
+    --editorial-white: 40 10% 92%;
+    --editorial-amber: 38 92% 50%;
+
+    /* Fonts */
+    --font-mono: "JetBrains Mono", monospace;
+    --font-sans: "Inter", system-ui, sans-serif;
+    --font-blueprint: "Space Mono", monospace;
+    --font-serif: "Instrument Serif", Georgia, serif;
+  }
+
+  .dark {
+    --background: 215 28% 5%;
+    --foreground: 0 0% 85%;
+    --card: 215 25% 8%;
+    --card-foreground: 0 0% 85%;
+    --popover: 215 25% 8%;
+    --popover-foreground: 0 0% 85%;
+    --primary: 135 73% 52%;
+    --primary-foreground: 215 28% 5%;
+    --secondary: 215 20% 12%;
+    --secondary-foreground: 0 0% 75%;
+    --muted: 215 20% 15%;
+    --muted-foreground: 215 10% 55%;
+    --accent: 135 73% 52%;
+    --accent-foreground: 215 28% 5%;
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 215 20% 18%;
+    --input: 215 20% 18%;
+    --ring: 135 73% 52%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+
+  /* Terminal theme body */
+  .theme-terminal body,
+  .theme-terminal {
+    font-family: var(--font-mono);
+  }
+
+  /* Blueprint theme body */
+  .theme-blueprint body,
+  .theme-blueprint {
+    font-family: var(--font-sans);
+    background-color: hsl(var(--blueprint-navy));
+    color: hsl(var(--blueprint-text));
+  }
+
+  /* Editorial theme body */
+  .theme-editorial body,
+  .theme-editorial {
+    font-family: var(--font-sans);
+    background-color: hsl(var(--editorial-black));
+    color: hsl(var(--editorial-white));
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: hsl(var(--background));
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--border));
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--muted-foreground));
+  }
+}
+
+@layer components {
+  /* Terminal Theme Components */
+  .cursor-blink {
+    animation: blink 1s step-end infinite;
+  }
+
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+  }
+
+  .terminal-prompt::before {
+    content: ">";
+    @apply text-primary mr-2;
+  }
+
+  .glow-primary {
+    box-shadow: 0 0 20px hsl(var(--primary) / 0.3);
+  }
+
+  .terminal-card {
+    @apply bg-card border border-border rounded-sm relative overflow-hidden;
+  }
+
+  .link-underline {
+    @apply relative;
+  }
+
+  .link-underline::after {
+    content: "";
+    @apply absolute bottom-0 left-0 w-0 h-px bg-primary transition-all duration-300;
+  }
+
+  .link-underline:hover::after {
+    @apply w-full;
+  }
+
+  /* Blueprint Theme Components */
+  .blueprint-grid {
+    background-image: 
+      radial-gradient(circle, hsl(var(--blueprint-line)) 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+
+  .blueprint-lines {
+    background-image: 
+      linear-gradient(hsl(var(--blueprint-line) / 0.3) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(var(--blueprint-line) / 0.3) 1px, transparent 1px);
+    background-size: 48px 48px;
+  }
+}
+
+@layer utilities {
+  .text-gradient-primary {
+    @apply bg-gradient-to-r from-primary to-[hsl(var(--terminal-cyan))] bg-clip-text text-transparent;
+  }
+
+  .bg-grid-pattern {
+    background-image: 
+      linear-gradient(hsl(var(--border) / 0.3) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(var(--border) / 0.3) 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+}

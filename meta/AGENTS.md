@@ -82,53 +82,49 @@ Then collaborate to create the new task framework.
 
 **Current Site Structure:**
 ```
-app/
-├── page.tsx           # Homepage with all sections
-├── about/page.tsx     # About page
-├── projects/page.tsx  # Projects listing
-├── content/page.tsx   # Content hub (blog posts)
-├── roles/             # Detailed role pages
-│   ├── recruitment-hr-system/
-│   └── lottery-finance-platform/
-└── layout.tsx         # Root layout
+src/
+├── pages/             # Page components (React Router)
+│   ├── Index.tsx      # Homepage with all sections
+│   ├── Content.tsx    # Content hub (blog posts)
+│   ├── NotFound.tsx   # 404 page
+│   └── work/          # Work detail pages
+│       ├── TheLotter.tsx
+│       ├── Lusha.tsx
+│       └── IDF.tsx
+├── components/
+│   ├── terminal/      # Homepage section components
+│   │   ├── Header.tsx
+│   │   ├── Hero.tsx
+│   │   ├── About.tsx
+│   │   ├── Work.tsx
+│   │   ├── Projects.tsx
+│   │   ├── Testimonials.tsx
+│   │   ├── Contact.tsx
+│   │   └── Footer.tsx
+│   └── ui/            # shadcn/ui components
+├── data/
+│   └── content.ts     # Content entries (60+ posts)
+├── hooks/             # Custom React hooks
+├── lib/
+│   └── utils.ts       # General utilities
+├── App.tsx            # Router setup
+├── main.tsx           # Entry point
+└── index.css          # Global styles
 
-components/
-├── home/              # Homepage components
-│   ├── Hero.tsx
-│   ├── AboutMe.tsx
-│   ├── FeatureRoles.tsx
-│   ├── BuilderProjects.tsx
-│   ├── TestimonialCarousel.tsx
-│   └── GetInTouch.tsx
-├── shared/            # Shared components
-│   ├── Header.tsx
-│   └── Footer.tsx
-├── content/           # Content page components
-│   ├── ContentCard.tsx
-│   ├── ContentFilters.tsx
-│   ├── Pagination.tsx
-│   └── TagChip.tsx
-└── projects/          # Project components
-
-data/
-└── content.ts         # Content entries (57 posts)
-
-types/
-└── content.ts         # ContentItem, ContentTag types
-
-lib/
-├── utils.ts           # General utilities
-└── contentUtils.ts    # Tag assignment helpers
+public/                # Static assets
+├── images/            # Profile photos, diagrams
+└── favicon.ico
 ```
 
 **Tech Stack:**
-- Next.js 14 (App Router)
-- React 18
+- Vite (build tool)
+- React 18 + React Router 6
 - Tailwind CSS
 - Framer Motion (animations)
+- shadcn/ui components
 - TypeScript
 
-**Dev Server:** Port 2500 (`npm run dev`)
+**Dev Server:** Port 8080 (`npm run dev`)
 
 ### 5. Content Hub (Implemented)
 
@@ -150,7 +146,7 @@ The Content page (`/content`) is now live with:
 
 3. **Adding Content**:
    - See [tasks/add-content/INSTRUCTIONS.md](tasks/add-content/INSTRUCTIONS.md)
-   - Add entries to `data/content.ts`
+   - Add entries to `src/data/content.ts`
    - Use 1-3 tags per post
 
 See [roadmap/content-hub-vision.md](roadmap/content-hub-vision.md) for future enhancements.
@@ -166,7 +162,7 @@ After completing a task and receiving feedback:
 ## Quick Start Examples
 
 **User says**: "Add this to my content" or "I want to add a new content piece"
-**You do**: Load [tasks/add-content/INSTRUCTIONS.md](tasks/add-content/INSTRUCTIONS.md), gather details (title, subtitle, URL, date, tags), add to `data/content.ts`
+**You do**: Load [tasks/add-content/INSTRUCTIONS.md](tasks/add-content/INSTRUCTIONS.md), gather details (title, subtitle, URL, date, tags), add to `src/data/content.ts`
 
 **User says**: "I appeared on a podcast"
 **You do**: Load [tasks/add-media-appearance/INSTRUCTIONS.md](tasks/add-media-appearance/INSTRUCTIONS.md), gather podcast details

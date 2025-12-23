@@ -6,19 +6,18 @@
 
 ## What This Site Is
 
-Matan Grady's personal portfolio site serves as a **central hub** for professional presence. It's evolving from a simple portfolio into a comprehensive content aggregator.
+Matan Grady's personal portfolio site serves as a **central hub** for professional presence. It aggregates professional content and showcases work experience.
 
 ### Current State
-- Homepage with hero, about, portfolio, testimonials, contact sections
-- About page with detailed background
-- Featured roles/projects with dedicated pages
-- Builder projects section
+- Homepage with hero, about, work timeline, projects, testimonials, contact sections
+- Content page with search, filtering, and pagination
+- Work detail pages (TheLotter, Lusha, IDF)
+- Terminal/developer aesthetic design
 
 ### Future Vision
-- Content hub aggregating all professional content
-- Category-based filtering (thought leadership, guides, media)
-- Tools stack showcase
 - Expanded media appearances section
+- Tools stack showcase
+- Additional work detail pages
 
 ---
 
@@ -26,17 +25,19 @@ Matan Grady's personal portfolio site serves as a **central hub** for profession
 
 | Technology | Purpose |
 |------------|---------|
-| Next.js 14 | React framework with App Router |
+| Vite | Build tool and dev server |
 | React 18 | UI components |
+| React Router 6 | Client-side routing |
 | Tailwind CSS | Styling |
+| shadcn/ui | UI component library |
 | Framer Motion | Animations |
 | TypeScript | Type safety |
 | Lucide React | Icons |
 
 ### Key Patterns
-- **App Router**: Using `app/` directory structure
-- **Client Components**: Most components use `'use client'` for interactivity
-- **CSS**: Tailwind with custom navy color palette
+- **SPA**: Single page application with client-side routing
+- **Terminal Theme**: Developer-focused aesthetic with monospace fonts
+- **CSS Variables**: HSL-based color tokens
 - **Animations**: Scroll-triggered animations via Framer Motion
 
 ---
@@ -45,98 +46,94 @@ Matan Grady's personal portfolio site serves as a **central hub** for profession
 
 ```
 portfolio-site/
-├── app/                    # Next.js App Router pages
-│   ├── page.tsx           # Homepage
-│   ├── layout.tsx         # Root layout
-│   ├── about/             # About page
-│   ├── projects/          # Projects listing
-│   └── roles/             # Detailed role pages
-├── components/            # React components
-│   ├── home/              # Homepage sections
-│   ├── shared/            # Header, Footer
-│   └── projects/          # Project cards
-├── assets/                # Images and static files
-├── hooks/                 # Custom React hooks
-├── lib/                   # Utilities
-├── public/                # Public assets
-│
-# Assistant System (new)
-├── CLAUDE.md              # Entry point
-├── AGENTS.md              # Task routing hub
-├── meta/                  # Context files
-├── tasks/                 # Task instructions
-├── reference/             # Guidelines and standards
-└── projects/              # Planning documents
+├── src/
+│   ├── pages/             # Page components
+│   │   ├── Index.tsx      # Homepage
+│   │   ├── Content.tsx    # Content hub
+│   │   ├── NotFound.tsx   # 404 page
+│   │   └── work/          # Work detail pages
+│   ├── components/
+│   │   ├── terminal/      # Homepage sections
+│   │   └── ui/            # shadcn/ui components
+│   ├── data/              # Content data
+│   ├── hooks/             # Custom React hooks
+│   ├── lib/               # Utilities
+│   ├── App.tsx            # Router setup
+│   └── index.css          # Global styles
+├── public/                # Static assets
+├── meta/                  # Assistant documentation
+├── .claude/               # Claude settings
+├── index.html             # Entry point
+├── vite.config.ts         # Vite config
+├── tailwind.config.ts     # Tailwind config
+└── netlify.toml           # Netlify deployment config
 ```
 
 ---
 
 ## Design System
 
-### Colors
-- **Primary Navy**: `#0a192f` (bg-navy-primary)
-- **Accent Green**: `#10b981` (green-500)
-- **Accent Blue**: `#3b82f6` (blue-500)
-- **Text**: White/gray-300 on dark backgrounds
+### Colors (Terminal Theme)
+- **Background**: Dark navy (`hsl(215 28% 5%)`)
+- **Primary**: Bright green (`hsl(135 73% 52%)`)
+- **Accent Cyan**: `hsl(180 100% 50%)`
+- **Accent Amber**: `hsl(45 100% 50%)`
+- **Text**: Light gray on dark backgrounds
 
 ### Typography
-- Bold headlines with gradient text accents
-- Clean, readable body text
-- Monospace for technical content
+- **Mono**: JetBrains Mono (primary)
+- **Sans**: Inter
+- **Blueprint**: Space Mono
+- **Serif**: Instrument Serif
 
 ### Animations
 - Scroll-triggered fade-ins
+- Terminal typing effects
+- Cursor blinking
 - Subtle hover effects
-- Gradient glows and blurs for depth
 
 ---
 
-## Content Sections (Current)
+## Content Sections
 
 ### 1. Hero
+- Terminal window style
+- Animated typing effect
 - Name and title
-- Tagline: "Product Leader & Builder"
-- CTA buttons to portfolio and contact
 
-### 2. About Me
-- Brief professional bio
-- Profile image
-- Link to full about page
+### 2. About
+- Skills overview
+- Focus areas
+- Professional summary
 
-### 3. Featured Roles (Portfolio)
-- Past significant roles with impact
-- Dedicated pages for each role
-- Currently: HR System, Lottery Platform
+### 3. Work Timeline
+- Career history with companies
+- Promotion badges
+- Links to detail pages
 
-### 4. Builder Projects
+### 4. Projects
 - Side projects and experiments
-- Currently: EvalKit AI
+- External links
 
 ### 5. Testimonials
 - Carousel of colleague quotes
 
-### 6. Get in Touch
-- Contact information
+### 6. Contact
+- Contact methods
 - Social links
 
 ---
 
-## Content Sections (Planned)
+## Routes
 
-### Content Hub
-- Aggregated blog posts (Substack, LinkedIn, company blog)
-- Category filtering
-- Teaser cards linking to full content
-
-### Media Appearances
-- Podcast interviews
-- Video content
-- Conference talks
-
-### Tools Stack
-- Tools and technologies used daily
-- Productivity setup
-- AI tools and workflows
+| Route | Page | Description |
+|-------|------|-------------|
+| `/` | Index.tsx | Homepage with all sections |
+| `/content` | Content.tsx | Blog posts with search/filter |
+| `/work/thelotter` | TheLotter.tsx | theLotter case study |
+| `/work/lusha` | Lusha.tsx | Lusha case study |
+| `/work/idf` | IDF.tsx | IDF case study |
+| `*` | NotFound.tsx | 404 page |
 
 ---
 
@@ -146,12 +143,24 @@ portfolio-site/
 ```bash
 npm install
 npm run dev
-# Visit http://localhost:3000
+# Visit http://localhost:8080
+```
+
+### Build
+```bash
+npm run build
+# Output in dist/
+```
+
+### Preview Production Build
+```bash
+npm run preview
 ```
 
 ### Deployment
-- Hosted on Vercel (assumed)
+- Hosted on Netlify
 - Auto-deploy from main branch
+- SPA routing via `netlify.toml`
 
 ### Branch Strategy
 - `main`: Production
@@ -164,13 +173,14 @@ npm run dev
 
 | File | Purpose |
 |------|---------|
-| `app/page.tsx` | Homepage composition |
-| `components/home/Hero.tsx` | Hero section |
-| `components/home/AboutMe.tsx` | About preview |
-| `components/home/FeatureRoles.tsx` | Portfolio section |
+| `src/pages/Index.tsx` | Homepage composition |
+| `src/components/terminal/Hero.tsx` | Hero section |
+| `src/components/terminal/Work.tsx` | Work timeline |
+| `src/data/content.ts` | Content entries |
 | `tailwind.config.ts` | Design tokens |
+| `netlify.toml` | Deployment config |
 
 ---
 
-**Last Updated:** 2025-01-XX
+**Last Updated:** 2025-12-24
 **Purpose:** Provide site context for the portfolio assistant
