@@ -14,6 +14,7 @@ This folder contains the vision and active tasks for evolving the portfolio site
 
 ### Active Tasks
 - [ai-branding-rewrite.md](ai-branding-rewrite.md) - Reposition site for AI-native PM branding
+- [role-detail-pages.md](role-detail-pages.md) - Deep-dive pages for each company/role
 
 ---
 
