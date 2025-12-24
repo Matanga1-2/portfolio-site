@@ -87,27 +87,16 @@ export const About = () => {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={isInView ? { opacity: 1, scale: 1 } : {}}
               transition={{ delay: 0.4, duration: 0.5 }}
-              className="md:col-span-2"
+              className="md:col-span-2 flex justify-center"
             >
-              <div className="relative group">
-                {/* Terminal-style frame */}
-                <div className="absolute -inset-2 border border-primary/20 -z-10 group-hover:border-primary/40 transition-colors" />
-                <div className="absolute -inset-4 border border-dashed border-border -z-20" />
-                
-                {/* Profile image */}
-                <div className="aspect-square bg-secondary border border-border flex items-center justify-center overflow-hidden">
+              <div className="w-[80vw] sm:w-72 md:w-full max-w-xs">
+                <div className="aspect-square overflow-hidden rounded-lg">
                   <img
                     src="/images/matan_profile.jpg"
                     alt="Matan Grady"
-                    className="w-full h-full object-cover rounded-lg"
+                    className="w-full h-full object-cover"
                   />
                 </div>
-
-                {/* Corner accents */}
-                <div className="absolute -top-1 -left-1 w-3 h-3 border-t border-l border-primary" />
-                <div className="absolute -top-1 -right-1 w-3 h-3 border-t border-r border-primary" />
-                <div className="absolute -bottom-1 -left-1 w-3 h-3 border-b border-l border-primary" />
-                <div className="absolute -bottom-1 -right-1 w-3 h-3 border-b border-r border-primary" />
               </div>
             </motion.div>
           </div>
