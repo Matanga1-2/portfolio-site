@@ -10,7 +10,7 @@ import { Footer } from "@/components/terminal/Footer";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background text-foreground font-mono">
+    <div className="min-h-screen bg-background text-foreground font-mono overflow-x-hidden">
       <Header />
       <main>
         <Hero />

@@ -30,7 +30,7 @@ export const About = () => {
 
           <div className="grid md:grid-cols-5 gap-12">
             {/* Main content */}
-            <div className="md:col-span-3 space-y-6">
+            <div className="md:col-span-3 space-y-6 overflow-hidden">
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
                   <span className="text-primary">#</span> I'm a product leader who builds with AI.
@@ -64,7 +64,7 @@ export const About = () => {
                     initial={{ opacity: 0, x: -20 }}
                     animate={isInView ? { opacity: 1, x: 0 } : {}}
                     transition={{ delay: 0.2 + index * 0.1 }}
-                    className="font-mono text-sm"
+                    className="font-mono text-sm break-words"
                   >
                     <span className="text-terminal-cyan">const</span>{" "}
                     <span className="text-foreground">{skill.category}</span>{" "}
@@ -89,7 +89,7 @@ export const About = () => {
               transition={{ delay: 0.4, duration: 0.5 }}
               className="md:col-span-2 flex justify-center"
             >
-              <div className="w-[80vw] sm:w-72 md:w-full max-w-xs">
+              <div className="w-full max-w-[280px] sm:w-72 md:w-full md:max-w-xs mx-auto">
                 <div className="aspect-square overflow-hidden rounded-lg">
                   <img
                     src="/images/matan_profile.jpg"
