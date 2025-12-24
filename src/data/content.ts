@@ -8,11 +8,41 @@ export interface ContentItem {
   formattedDate: string
   tags: ContentTag[]
   url: string
-  source: 'Blog' | 'Port' | 'TheNewStack'
+  source: 'Blog' | 'Port' | 'TheNewStack' | 'Product @ Port'
 }
 
 export const contentData: ContentItem[] = [
   // === Port Blog Posts ===
+  {
+    id: 'balancing-stakeholders-without-breaking-the-product',
+    title: 'Balancing Stakeholders Without Breaking the Product',
+    subtitle: 'How Port\'s product team balances stakeholder feedback, customer needs, and long-term vision.',
+    date: new Date('2025-06-11T10:00:00.000Z'),
+    formattedDate: 'Jun 11, 2025',
+    tags: ['Product'],
+    url: 'https://productmanagement.port.io/posts/balancing-stakeholders-without-breaking-the-product',
+    source: 'Product @ Port'
+  },
+  {
+    id: 'how-we-manage-feature-ideas-at-port',
+    title: 'How we manage feature ideas at Port',
+    subtitle: 'Turning user feedback into actionable insights while balancing short-term needs with long-term product goals.',
+    date: new Date('2025-04-28T10:00:00.000Z'),
+    formattedDate: 'Apr 28, 2025',
+    tags: ['Product'],
+    url: 'https://productmanagement.port.io/posts/managing-feature-ideas',
+    source: 'Product @ Port'
+  },
+  {
+    id: 'why-dev-tooling-needs-a-pm',
+    title: 'Why Dev Tooling Needs a PM',
+    subtitle: 'Bridging technical complexity and user needs to build impactful products that improve developer experience.',
+    date: new Date('2025-04-23T10:00:00.000Z'),
+    formattedDate: 'Apr 23, 2025',
+    tags: ['Product'],
+    url: 'https://productmanagement.port.io/posts/why-devtooling-needs-pm',
+    source: 'Product @ Port'
+  },
   {
     id: 'introducing-port-ai-assistant',
     title: 'Introducing Port AI assistant',
