@@ -18,11 +18,11 @@ const roles = [
       {
         role: "Senior AI Product Manager",
         period: "Jan 2025 - Dec 2025",
-        description: "Leading Port's first AI offering and enabling AI capabilities across all product teams.",
+        description: "Leading Port's first AI offering and boosting AI capabilities across all product teams.",
         highlights: [
-          "Partnering with enterprise customers to deploy AI agents in production",
-          "Defining the future of AI-human collaboration interfaces",
-          "Uncovering critical gaps and opportunities in SDLC automation",
+          "Developed and shipped Port's first MCP server",
+          "Shipped first agentic offering in the space, partnering with early adopters to prove product-market fit",
+          "Established myself as AI SME: educated teams, implemented AI tools, and run 5+ agentic workflows company-wide",
         ],
       },
       {
@@ -30,9 +30,9 @@ const roles = [
         period: "Jul 2024 - Jan 2025",
         description: "Led two product teams focused on integrating organizations' tech-stack into their portal.",
         highlights: [
-          "Reduced customer tickets & bugs by 30% through documentation improvements",
-          "Implemented dedicated AI tools for support resolution",
-          "Consolidated data to enable next-generation experiences",
+          "Reduced customer tickets by 30% through data-driven roadmap shaping with hands-on involvement",
+          "Built and shipped first engineering metrics solution (DORA), expanding into new devtools verticals",
+          "Streamlined product processes for team collaboration, documentation, and customer engagement using AI tools",
         ],
       },
     ],
@@ -50,7 +50,7 @@ const roles = [
         highlights: [
           "Boosted user satisfaction by 15% through SLA establishment",
           "Reduced maintenance costs by 30% with infrastructure upgrades",
-          "Spearheaded cross-company packaging changes influencing UX",
+          "Drove cross-company packaging changes that shaped UX",
         ],
       },
       {
@@ -59,7 +59,7 @@ const roles = [
         description: "Led internal assets systems, including Billing & Credits.",
         highlights: [
           "Launched subscription billing system processing $50M annually",
-          "Achieved $150K/year in operational savings",
+          "Cut $150K/year in operational costs",
           "Optimized sale closing process saving 20 hours/month for sales",
         ],
       },
@@ -76,7 +76,7 @@ const roles = [
         period: "Jun 2021 - Jan 2022",
         description: "Recruited and led a team of 6 Product Managers.",
         highlights: [
-          "Implemented company-wide product methodologies",
+          "Rolled out company-wide product methodologies",
           "Increased employee NPS by 25% with new onboarding process",
           "Led design system initiative with 30+ components",
         ],
@@ -88,7 +88,7 @@ const roles = [
         highlights: [
           "Increased payment acceptance rate by 8%",
           "Improved visit-to-adoption conversion by 15%",
-          "At peak, led 3 teams with 13 engineers and 4 designers",
+          "Scaled to lead 3 teams: 13 engineers and 4 designers",
         ],
       },
     ],
@@ -104,9 +104,8 @@ const roles = [
         period: "Jan 2017 - Oct 2018",
         description: "Led a 1-year project moving 200+ users to SAP cloud.",
         highlights: [
-          "Managed full product lifecycle from ideation to production",
-          "Improved user engagement and satisfaction by 40%",
-          "Gathered requirements and created specifications",
+          "Lifted user engagement and satisfaction by 40%",
+          "Ramped up to own full product lifecycle with no prior experience, hitting all implementation targets",
         ],
       },
     ],
