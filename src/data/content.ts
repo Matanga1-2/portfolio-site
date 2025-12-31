@@ -8,10 +8,32 @@ export interface ContentItem {
   formattedDate: string
   tags: ContentTag[]
   url: string
-  source: 'Blog' | 'Port' | 'TheNewStack' | 'Product @ Port' | 'LinkedIn'
+  source: 'Blog' | 'Port' | 'TheNewStack' | 'Product @ Port' | 'LinkedIn' | 'YouTube'
 }
 
 export const contentData: ContentItem[] = [
+  // === YouTube Videos ===
+  {
+    id: 'youtube-evalkit-demo',
+    title: 'EvalKit: Evaluate your LLM prompts directly in Google Sheets',
+    subtitle: 'Test and evaluate AI prompts at scale with this Google Sheets add-on. No more manual copy-pasting or blind guesswork.',
+    date: new Date('2025-12-31T15:00:00.000Z'),
+    formattedDate: 'Dec 31, 2025',
+    tags: ['AI', 'Productivity'],
+    url: 'https://youtu.be/O5gzxkDNUqk',
+    source: 'YouTube'
+  },
+  {
+    id: 'youtube-morning-dashboard-claude-code',
+    title: 'Start your day in 2 minutes with Claude Code',
+    subtitle: 'How I built a personal AI assistant that pulls calendar, email, and tasks into one daily report.',
+    date: new Date('2025-12-31T14:00:00.000Z'),
+    formattedDate: 'Dec 31, 2025',
+    tags: ['AI', 'Productivity'],
+    url: 'https://youtu.be/5oJV3KhZ0cg',
+    source: 'YouTube'
+  },
+
   // === LinkedIn Posts ===
   {
     id: 'linkedin-ai-agents-whatsapp-productx',
