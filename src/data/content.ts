@@ -14,8 +14,18 @@ export interface ContentItem {
 export const contentData: ContentItem[] = [
   // === LinkedIn Posts ===
   {
+    id: 'linkedin-ai-agents-whatsapp-productx',
+    title: 'AI agents took control of our WhatsApp chat',
+    subtitle: 'How I turned a day of conference insights into LinkedIn posts in 5 minutes using Claude and writing guidelines.',
+    date: new Date('2025-12-31T12:00:00.000Z'),
+    formattedDate: 'Dec 31, 2025',
+    tags: ['AI', 'Productivity'],
+    url: 'https://www.linkedin.com/posts/matangrady_did-ai-agents-take-control-of-our-whatsapp-activity-7412032420801335296-olvA',
+    source: 'LinkedIn'
+  },
+  {
     id: 'linkedin-ai-chat-vs-google-reddit',
-    title: 'AI Chat vs Google vs Reddit',
+    title: 'AI chat vs Google vs Reddit',
     subtitle: 'Why I still double-check AI answers with Google, and why Reddit threads often win.',
     date: new Date('2025-11-18T20:16:11.000Z'),
     formattedDate: 'Nov 18, 2025',
@@ -25,7 +35,7 @@ export const contentData: ContentItem[] = [
   },
   {
     id: 'linkedin-claude-code-retro-games',
-    title: 'Claude Code for Retro Games',
+    title: 'Claude Code for retro games',
     subtitle: 'Using Claude Code to sort through 10,000+ retro games and find the ones worth playing.',
     date: new Date('2025-11-12T20:27:53.000Z'),
     formattedDate: 'Nov 12, 2025',
@@ -35,7 +45,7 @@ export const contentData: ContentItem[] = [
   },
   {
     id: 'linkedin-claude-code-supermarket',
-    title: 'Vibe-Living with Claude Code',
+    title: 'Vibe-living with Claude Code',
     subtitle: 'Using Claude Code to compare supermarket prices. Not vibe-coding, but vibe-living.',
     date: new Date('2025-10-31T13:24:34.000Z'),
     formattedDate: 'Oct 31, 2025',
@@ -45,7 +55,7 @@ export const contentData: ContentItem[] = [
   },
   {
     id: 'linkedin-ai-release-notes-port-mcp',
-    title: 'AI-Powered Release Notes with Port MCP',
+    title: 'AI-powered release notes with Port MCP',
     subtitle: 'Using Port MCP server to generate consistent release announcements from context lake.',
     date: new Date('2025-10-23T10:52:24.000Z'),
     formattedDate: 'Oct 23, 2025',
@@ -55,7 +65,7 @@ export const contentData: ContentItem[] = [
   },
   {
     id: 'linkedin-ai-agent-inbox',
-    title: 'AI Agent Managing My Inbox',
+    title: 'AI agent managing my inbox',
     subtitle: 'I built an AI agent in Port to manage my email. Now my inbox is empty.',
     date: new Date('2025-10-22T03:08:25.000Z'),
     formattedDate: 'Oct 22, 2025',
@@ -65,7 +75,7 @@ export const contentData: ContentItem[] = [
   },
   {
     id: 'linkedin-port-context-lake',
-    title: 'Port as Context Lake for Workflows',
+    title: 'Port as context lake for workflows',
     subtitle: 'Everyone talks about automating workflows. Fewer talk about feeding them with the right context.',
     date: new Date('2025-10-21T06:32:10.000Z'),
     formattedDate: 'Oct 21, 2025',
@@ -75,7 +85,7 @@ export const contentData: ContentItem[] = [
   },
   {
     id: 'linkedin-ai-agent-meeting-notes',
-    title: 'AI Agent for Meeting Notes: Deterministic Wins',
+    title: 'AI agent for meeting notes: deterministic wins',
     subtitle: 'I tried an AI agent for meeting insights. My final solution had no agent at all.',
     date: new Date('2025-09-04T06:14:08.000Z'),
     formattedDate: 'Sep 4, 2025',
@@ -85,7 +95,7 @@ export const contentData: ContentItem[] = [
   },
   {
     id: 'linkedin-deep-conversations',
-    title: 'Deep Conversations > Vibe-Coding',
+    title: 'Deep conversations > vibe-coding',
     subtitle: 'My favorite, highest ROI method as a PM: having deep conversations with my team.',
     date: new Date('2025-08-02T19:04:05.000Z'),
     formattedDate: 'Aug 2, 2025',
@@ -95,7 +105,7 @@ export const contentData: ContentItem[] = [
   },
   {
     id: 'linkedin-mcp-server-reality',
-    title: 'Using MCP Servers: The Reality',
+    title: 'Using MCP servers: the reality',
     subtitle: 'After installing 10+ MCP servers, here\'s the 7-step reality most people don\'t share.',
     date: new Date('2025-06-10T20:39:14.000Z'),
     formattedDate: 'Jun 10, 2025',
@@ -105,7 +115,7 @@ export const contentData: ContentItem[] = [
   },
   {
     id: 'linkedin-o3-plays-pokemon',
-    title: 'O3 Plays Pokemon',
+    title: 'O3 plays Pokemon',
     subtitle: 'עם כל הכבוד לאוטומציות המורכבות... שלא נסיט את המבט ממה באמת חשוב',
     date: new Date('2025-05-30T12:14:25.000Z'),
     formattedDate: 'May 30, 2025',
@@ -115,7 +125,7 @@ export const contentData: ContentItem[] = [
   },
   {
     id: 'linkedin-how-i-choose-llm',
-    title: 'How I Choose Which LLM to Use',
+    title: 'How I choose which LLM to use',
     subtitle: 'My mental model for Claude, GPT, Perplexity, Gemini, and Grok—each for different tasks.',
     date: new Date('2025-05-21T14:12:17.000Z'),
     formattedDate: 'May 21, 2025',
@@ -125,7 +135,7 @@ export const contentData: ContentItem[] = [
   },
   {
     id: 'linkedin-evalkit-launch',
-    title: 'EvalKit: Prompt Testing in Google Sheets',
+    title: 'EvalKit: prompt testing in Google Sheets',
     subtitle: 'I was stuck in a loop of guesswork. So I built EvalKit to test prompts with data, not vibes.',
     date: new Date('2025-05-06T20:16:48.000Z'),
     formattedDate: 'May 6, 2025',
@@ -135,7 +145,7 @@ export const contentData: ContentItem[] = [
   },
   {
     id: 'linkedin-bolt-new-images-tip',
-    title: 'bolt.new Tip: Custom Images',
+    title: 'bolt.new tip: custom images',
     subtitle: 'Uploading images to chat doesn\'t work well. Drag and drop to public assets instead.',
     date: new Date('2025-04-27T05:54:46.000Z'),
     formattedDate: 'Apr 27, 2025',
@@ -145,7 +155,7 @@ export const contentData: ContentItem[] = [
   },
   {
     id: 'linkedin-kickstart-coding-projects',
-    title: 'How I Kickstart Coding Projects',
+    title: 'How I kickstart coding projects',
     subtitle: 'My workflow: ChatGPT audio for ideas, Claude for architecture, Cursor for execution.',
     date: new Date('2025-03-25T06:18:04.000Z'),
     formattedDate: 'Mar 25, 2025',

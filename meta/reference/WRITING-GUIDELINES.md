@@ -55,6 +55,27 @@ Be specific. "Automates incident response" beats "provides comprehensive capabil
 ### Vary Sentence Length
 Mix short and long. Break up rhythm.
 
+## Title Casing
+
+**Use sentence case for all titles** - capitalize only the first word and proper nouns/names.
+
+✅ **Do**:
+- "AI agents took control of our WhatsApp chat" (WhatsApp is a proper noun)
+- "How I choose which LLM to use" (LLM is an acronym)
+- "Claude Code for retro games" (Claude Code is a product name)
+- "Port as context lake for workflows" (Port is a company name)
+
+❌ **Don't**:
+- "AI Agents Took Control of Our WhatsApp Chat"
+- "How I Choose Which LLM To Use"
+
+**What stays uppercase**:
+- Product names: Claude, Port, Google, Reddit, EvalKit
+- Acronyms: AI, LLM, MCP, API, DORA
+- First word of the title
+
+---
+
 ## Content-Specific Guidelines
 
 ### Blog Post Summaries
