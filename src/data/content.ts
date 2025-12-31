@@ -36,6 +36,16 @@ export const contentData: ContentItem[] = [
 
   // === LinkedIn Posts ===
   {
+    id: 'linkedin-claude-code-morning-routine',
+    title: 'Shrunk my workday startup from 15 minutes to 2',
+    subtitle: 'How I built a personal assistant with Claude Code and MCP servers to generate my daily agenda.',
+    date: new Date('2025-12-31T16:00:00.000Z'),
+    formattedDate: 'Dec 31, 2025',
+    tags: ['AI', 'Productivity'],
+    url: 'PENDING', // TODO: Update with LinkedIn URL once post is live
+    source: 'LinkedIn'
+  },
+  {
     id: 'linkedin-ai-agents-whatsapp-productx',
     title: 'AI agents took control of our WhatsApp chat',
     subtitle: 'How I turned a day of conference insights into LinkedIn posts in 5 minutes using Claude and writing guidelines.',
