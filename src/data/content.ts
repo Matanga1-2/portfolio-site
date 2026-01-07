@@ -36,13 +36,23 @@ export const contentData: ContentItem[] = [
 
   // === LinkedIn Posts ===
   {
+    id: 'linkedin-test-driven-ai-agents',
+    title: 'Test-driven development for AI agents',
+    subtitle: 'How I set up testing criteria so my AI agent could build, run, check, and iterate without me.',
+    date: new Date('2026-01-07T10:00:00.000Z'),
+    formattedDate: 'Jan 7, 2026',
+    tags: ['AI', 'Engineering'],
+    url: 'https://www.linkedin.com/feed/update/urn:li:activity:7414215101861335040/',
+    source: 'LinkedIn'
+  },
+  {
     id: 'linkedin-claude-code-morning-routine',
     title: 'Shrunk my workday startup from 15 minutes to 2',
     subtitle: 'How I built a personal assistant with Claude Code and MCP servers to generate my daily agenda.',
-    date: new Date('2025-12-31T16:00:00.000Z'),
-    formattedDate: 'Dec 31, 2025',
+    date: new Date('2026-01-04T10:00:00.000Z'),
+    formattedDate: 'Jan 4, 2026',
     tags: ['AI', 'Productivity'],
-    url: 'PENDING', // TODO: Update with LinkedIn URL once post is live
+    url: 'https://www.linkedin.com/feed/update/urn:li:activity:7413519596885790720/',
     source: 'LinkedIn'
   },
   {
