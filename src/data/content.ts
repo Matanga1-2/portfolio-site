@@ -36,6 +36,16 @@ export const contentData: ContentItem[] = [
 
   // === LinkedIn Posts ===
   {
+    id: 'linkedin-claude-code-phone-sandbox',
+    title: 'I tried triggering Claude Code from my phone',
+    subtitle: 'The phone-to-agent workflow is appealing. Start something during dead time, return to results. But sandboxes have limits.',
+    date: new Date('2026-01-14T10:00:00.000Z'),
+    formattedDate: 'Jan 14, 2026',
+    tags: ['AI', 'Engineering'],
+    url: 'https://www.linkedin.com/feed/update/urn:li:activity:7417112998730948608/',
+    source: 'LinkedIn'
+  },
+  {
     id: 'linkedin-test-driven-ai-agents',
     title: 'Test-driven development for AI agents',
     subtitle: 'How I set up testing criteria so my AI agent could build, run, check, and iterate without me.',
