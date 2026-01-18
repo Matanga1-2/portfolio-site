@@ -36,6 +36,16 @@ export const contentData: ContentItem[] = [
 
   // === LinkedIn Posts ===
   {
+    id: 'linkedin-ddd-for-ai',
+    title: 'Domain-Driven Design for AI',
+    subtitle: 'The same architecture patterns we solved in software 20 years ago are showing up in how we build AI systems.',
+    date: new Date('2026-01-18T10:00:00.000Z'),
+    formattedDate: 'Jan 18, 2026',
+    tags: ['AI', 'Engineering'],
+    url: 'https://www.linkedin.com/posts/matangrady_one-concept-that-shaped-how-i-write-code-activity-7418653152595398656-z7XV',
+    source: 'LinkedIn'
+  },
+  {
     id: 'linkedin-claude-code-phone-sandbox',
     title: 'I tried triggering Claude Code from my phone',
     subtitle: 'The phone-to-agent workflow is appealing. Start something during dead time, return to results. But sandboxes have limits.',
