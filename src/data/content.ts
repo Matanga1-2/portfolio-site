@@ -237,6 +237,16 @@ export const contentData: ContentItem[] = [
   },
   // === Port Blog Posts ===
   {
+    id: 'why-ai-agents-need-a-context-lake',
+    title: 'Why AI agents need a context lake',
+    subtitle: 'Your AI agent has tool access. What it\'s missing is the knowledge that makes those tools useful.',
+    date: new Date('2026-01-21T10:00:00.000Z'),
+    formattedDate: 'Jan 21, 2026',
+    tags: ['AI', 'Engineering'],
+    url: 'https://www.port.io/blog/why-ai-agents-need-a-context-lake',
+    source: 'Port'
+  },
+  {
     id: 'balancing-stakeholders-without-breaking-the-product',
     title: 'Balancing Stakeholders Without Breaking the Product',
     subtitle: 'How Port\'s product team balances stakeholder feedback, customer needs, and long-term vision.',
