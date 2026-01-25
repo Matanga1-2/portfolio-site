@@ -8,10 +8,42 @@ export interface ContentItem {
   formattedDate: string
   tags: ContentTag[]
   url: string
-  source: 'Blog' | 'Port' | 'TheNewStack' | 'Product @ Port' | 'LinkedIn' | 'YouTube'
+  source: 'Blog' | 'Port' | 'TheNewStack' | 'Product @ Port' | 'LinkedIn' | 'YouTube' | 'Webinar'
 }
 
 export const contentData: ContentItem[] = [
+  // === Webinars ===
+  {
+    id: 'webinar-port-n8n-ai-workflows',
+    title: 'Port × n8n: Boost AI Workflows with Context, Guardrails, and Control',
+    subtitle: 'How teams can supercharge AI agents and workflows in n8n with Port\'s Context Lake - so agents act on reality, not guesswork.',
+    date: new Date('2026-01-22T10:00:00.000Z'),
+    formattedDate: 'Jan 22, 2026',
+    tags: ['AI', 'Engineering'],
+    url: 'https://www.youtube.com/watch?v=R7LwSItqUPY',
+    source: 'Webinar'
+  },
+  {
+    id: 'webinar-ielf-developer-productivity-agentic-sdlc',
+    title: 'Israeli Engineering Leaders Forum: Developer Productivity & Impact in the Agentic SDLC',
+    subtitle: 'Panel discussion on measuring developer productivity in AI-augmented workflows - what it means and how to make it visible and actionable.',
+    date: new Date('2025-12-09T10:00:00.000Z'),
+    formattedDate: 'Dec 9, 2025',
+    tags: ['AI', 'Engineering'],
+    url: 'https://www.youtube.com/watch?v=JDAJeuMoh44',
+    source: 'Webinar'
+  },
+  {
+    id: 'webinar-agentic-engineering-context-guardrails',
+    title: 'Agentic Engineering: Context, Guardrails, & Creativity',
+    subtitle: 'How to move from manual engineering to agentic engineering - exploring AI chaos, customer insights, and the evolution of internal developer portals.',
+    date: new Date('2025-11-04T10:00:00.000Z'),
+    formattedDate: 'Nov 4, 2025',
+    tags: ['AI', 'Engineering'],
+    url: 'https://www.youtube.com/watch?v=vRCWK1sQmas',
+    source: 'Webinar'
+  },
+
   // === YouTube Videos ===
   {
     id: 'youtube-evalkit-demo',
