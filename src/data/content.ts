@@ -8,10 +8,32 @@ export interface ContentItem {
   formattedDate: string
   tags: ContentTag[]
   url: string
-  source: 'Blog' | 'Port' | 'TheNewStack' | 'Product @ Port' | 'LinkedIn' | 'YouTube' | 'Webinar'
+  source: 'Blog' | 'Port' | 'TheNewStack' | 'Product @ Port' | 'LinkedIn' | 'YouTube' | 'Webinar' | 'Podcast'
 }
 
 export const contentData: ContentItem[] = [
+  // === Podcasts ===
+  {
+    id: 'podcast-tech-radar-voice-context-engineering',
+    title: 'Context Engineering',
+    subtitle: 'Discussing how context functions as a dynamic, cross-cutting concern spanning the full SDLC - covering tribal knowledge management, memory design, and tool coordination in AI systems.',
+    date: new Date('2026-01-26T10:00:00.000Z'),
+    formattedDate: 'Jan 26, 2026',
+    tags: ['AI', 'Engineering'],
+    url: 'https://open.spotify.com/episode/7MbRBz9uZgmyZwLpIUusUb',
+    source: 'Podcast'
+  },
+  {
+    id: 'podcast-forward-slash-engineering-ops-ai',
+    title: '/engineering ops: orchestrating AI at scale',
+    subtitle: 'Discussing platform engineering as a control plane for AI adoption - from chat interfaces to agentic workflows, production safeguards, and measuring AI success through outcomes.',
+    date: new Date('2025-10-09T10:00:00.000Z'),
+    formattedDate: 'Oct 9, 2025',
+    tags: ['AI', 'Engineering'],
+    url: 'https://open.spotify.com/episode/27bwYH2qYVzat9vnmonPnx',
+    source: 'Podcast'
+  },
+
   // === Webinars ===
   {
     id: 'webinar-port-n8n-ai-workflows',
