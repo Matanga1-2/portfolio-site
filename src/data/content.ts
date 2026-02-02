@@ -90,6 +90,16 @@ export const contentData: ContentItem[] = [
 
   // === LinkedIn Posts ===
   {
+    id: 'linkedin-deterministic-rules-ai',
+    title: 'When to use AI vs deterministic rules',
+    subtitle: 'AI is great for flexibility and creativity. But when consistency matters, you need deterministic rules that catch violations before they ship.',
+    date: new Date('2026-02-02T10:00:00.000Z'),
+    formattedDate: 'Feb 2, 2026',
+    tags: ['AI', 'Engineering'],
+    url: 'https://www.linkedin.com/feed/update/urn:li:activity:7424023399347142658/',
+    source: 'LinkedIn'
+  },
+  {
     id: 'linkedin-ddd-for-ai',
     title: 'Domain-Driven Design for AI',
     subtitle: 'The same architecture patterns we solved in software 20 years ago are showing up in how we build AI systems.',
