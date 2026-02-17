@@ -90,6 +90,16 @@ export const contentData: ContentItem[] = [
 
   // === LinkedIn Posts ===
   {
+    id: 'linkedin-slack-ask-once-feature',
+    title: "Here's a feature idea for Slack",
+    subtitle: 'What if you could ask someone\'s input in a channel without adding them to it?',
+    date: new Date('2026-02-17T10:00:00.000Z'),
+    formattedDate: 'Feb 17, 2026',
+    tags: ['Product'],
+    url: 'https://www.linkedin.com/feed/update/urn:li:activity:7429497957432987648/',
+    source: 'LinkedIn'
+  },
+  {
     id: 'linkedin-deterministic-rules-ai',
     title: 'When to use AI vs deterministic rules',
     subtitle: 'AI is great for flexibility and creativity. But when consistency matters, you need deterministic rules that catch violations before they ship.',
