@@ -90,6 +90,16 @@ export const contentData: ContentItem[] = [
 
   // === LinkedIn Posts ===
   {
+    id: 'linkedin-skills-in-port',
+    title: 'Skills discoverability via MCP',
+    subtitle: 'The biggest problem with AI agent skills isn\'t building them. It\'s finding them. Our team at Port exposed skills through the MCP server.',
+    date: new Date('2026-04-06T10:00:00.000Z'),
+    formattedDate: 'Apr 6, 2026',
+    tags: ['AI', 'Port'],
+    url: 'https://www.linkedin.com/posts/matangrady_the-biggest-problem-with-ai-agent-skills-share-7446993975476977664-KGX_',
+    source: 'LinkedIn'
+  },
+  {
     id: 'linkedin-slack-ask-once-feature',
     title: "Here's a feature idea for Slack",
     subtitle: 'What if you could ask someone\'s input in a channel without adding them to it?',
