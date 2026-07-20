@@ -44,12 +44,10 @@ const BlogPost = () => {
 
   if (article === undefined) {
     return (
-      <div className="min-h-screen bg-background text-foreground font-mono">
+      <div className="min-h-screen bg-background text-foreground font-blog antialiased">
         <Header />
         <main className="container mx-auto px-4 pt-24 pb-20">
-          <motion.div className="max-w-3xl mx-auto text-center text-muted-foreground">
-            Loading...
-          </motion.div>
+          <div className="max-w-2xl mx-auto text-center text-muted-foreground">Loading...</div>
         </main>
         <Footer />
       </div>
@@ -58,13 +56,13 @@ const BlogPost = () => {
 
   if (!article) {
     return (
-      <div className="min-h-screen bg-background text-foreground font-mono">
+      <div className="min-h-screen bg-background text-foreground font-blog antialiased">
         <Header />
         <main className="container mx-auto px-4 pt-24 pb-20">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="max-w-3xl mx-auto text-center"
+            className="max-w-2xl mx-auto text-center"
           >
             <p className="text-muted-foreground mb-4">Article not found.</p>
             <Link to="/content" className="text-primary hover:underline">
@@ -82,11 +80,11 @@ const BlogPost = () => {
   const textDir = lang === "he" ? "rtl" : "ltr";
 
   return (
-    <div className="min-h-screen bg-background text-foreground font-mono">
+    <motion.div className="min-h-screen bg-background text-foreground font-blog antialiased">
       <Header />
       <main className="pt-24 pb-20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-2xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
@@ -94,7 +92,7 @@ const BlogPost = () => {
             >
               <Link
                 to="/content"
-                className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
+                className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
               >
                 <ArrowLeft className="w-4 h-4" />
                 <span className="text-primary">~</span>/content
@@ -105,25 +103,24 @@ const BlogPost = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 }}
-              className="mb-10"
+              className="space-y-4 mb-10"
               dir={textDir}
               lang={lang}
             >
-              <h1 className="text-2xl md:text-4xl font-bold text-foreground mb-4 leading-tight">
+              <div className="flex flex-wrap items-center gap-3 text-sm text-muted-foreground">
+                <time className="font-mono">{article.formattedDate}</time>
+                <span>·</span>
+                <span>{author}</span>
+              </div>
+              <h1 className="text-2xl md:text-3xl font-bold tracking-tight leading-tight text-foreground">
                 {title}
               </h1>
-              <p className="text-muted-foreground text-lg mb-6">{subtitle}</p>
+              <p className="text-muted-foreground text-lg leading-relaxed">{subtitle}</p>
               <div className="flex flex-wrap gap-2">
-                <span className="text-xs px-2 py-0.5 bg-secondary text-secondary-foreground border border-border">
-                  {author}
-                </span>
-                <span className="text-xs px-2 py-0.5 bg-secondary text-secondary-foreground border border-border">
-                  {article.formattedDate}
-                </span>
                 {tags.map((tag) => (
                   <span
                     key={tag}
-                    className="text-xs px-2 py-0.5 bg-secondary text-secondary-foreground border border-border"
+                    className="text-xs px-3 py-1 rounded-full bg-primary/10 text-primary border border-primary/20"
                   >
                     {tag}
                   </span>
@@ -131,22 +128,14 @@ const BlogPost = () => {
               </div>
             </motion.header>
 
-            <article
-              dir={textDir}
-              lang={lang}
-              className="prose prose-invert prose-base max-w-none
-                prose-headings:text-foreground prose-headings:font-bold
-                prose-p:text-foreground prose-p:leading-relaxed
-                prose-li:text-foreground prose-strong:text-foreground
-                prose-a:text-primary prose-a:no-underline hover:prose-a:underline"
-            >
+            <article dir={textDir} lang={lang} className="blog-prose">
               <Component components={mdxComponents} />
             </article>
           </div>
         </div>
       </main>
       <Footer />
-    </div>
+    </motion.div>
   );
 };
 

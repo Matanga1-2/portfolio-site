@@ -5,6 +5,14 @@
 @import "@fontsource/inter/500.css";
 @import "@fontsource/inter/600.css";
 @import "@fontsource/inter/700.css";
+@import "@fontsource/heebo/hebrew-400.css";
+@import "@fontsource/heebo/hebrew-500.css";
+@import "@fontsource/heebo/hebrew-600.css";
+@import "@fontsource/heebo/hebrew-700.css";
+@import "@fontsource/heebo/latin-400.css";
+@import "@fontsource/heebo/latin-500.css";
+@import "@fontsource/heebo/latin-600.css";
+@import "@fontsource/heebo/latin-700.css";
 @import "@fontsource/space-mono/400.css";
 @import "@fontsource/space-mono/700.css";
 @import "@fontsource/instrument-serif/400.css";
@@ -64,6 +72,7 @@
     /* Fonts */
     --font-mono: "JetBrains Mono", monospace;
     --font-sans: "Inter", system-ui, sans-serif;
+    --font-blog: "Heebo", "Inter", system-ui, sans-serif;
     --font-blueprint: "Space Mono", monospace;
     --font-serif: "Instrument Serif", Georgia, serif;
   }
@@ -191,6 +200,42 @@
       linear-gradient(hsl(var(--blueprint-line) / 0.3) 1px, transparent 1px),
       linear-gradient(90deg, hsl(var(--blueprint-line) / 0.3) 1px, transparent 1px);
     background-size: 48px 48px;
+  }
+
+  .blog-prose {
+    @apply prose prose-invert max-w-none antialiased;
+  }
+
+  .blog-prose :where(p):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+    @apply leading-7 text-foreground;
+  }
+
+  .blog-prose :where(h2):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+    @apply mt-12 scroll-m-20 border-b border-border pb-2 text-2xl font-bold tracking-tight text-foreground first:mt-0;
+  }
+
+  .blog-prose :where(h3):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+    @apply mt-8 scroll-m-20 text-xl font-bold tracking-tight text-foreground;
+  }
+
+  .blog-prose :where(a):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+    @apply font-medium text-primary underline underline-offset-4 hover:text-primary/80;
+  }
+
+  .blog-prose :where(code):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+    @apply rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm;
+  }
+
+  .blog-prose :where(ul, ol):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+    @apply my-6;
+  }
+
+  .blog-prose :where(li):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+    @apply mt-2 text-foreground;
+  }
+
+  .blog-prose :where(hr):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+    @apply my-8 border-border;
   }
 }
 
