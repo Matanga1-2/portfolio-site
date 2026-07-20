@@ -11,15 +11,20 @@ import {
   ContentItem,
   isInternalContent,
 } from "@/data/content";
+import { hasHebrew } from "@/lib/text";
+import { cn } from "@/lib/utils";
 
 const ITEMS_PER_PAGE = 9;
 
 const cardClassName =
   "group bg-card border border-border p-5 hover:border-primary/50 transition-all duration-300 hover:-translate-y-1 flex flex-col";
 
-const CardContent = ({ item }: { item: ContentItem }) => (
-  <>
-    <div className="flex items-start justify-between mb-3">
+const CardContent = ({ item }: { item: ContentItem }) => {
+  const isRtl = hasHebrew(item.title) || hasHebrew(item.subtitle);
+
+  return (
+    <>
+      <div className="flex items-start justify-between mb-3">
       <span className="text-xs font-mono text-muted-foreground">{item.source}</span>
       {!isInternalContent(item) && (
         <ExternalLink
@@ -29,11 +34,25 @@ const CardContent = ({ item }: { item: ContentItem }) => (
       )}
     </div>
 
-    <h3 className="font-bold text-foreground mb-2 line-clamp-2 group-hover:text-primary transition-colors">
-      {item.title}
-    </h3>
+      <h3
+        dir={isRtl ? "rtl" : undefined}
+        className={cn(
+          "font-bold text-foreground mb-2 line-clamp-2 group-hover:text-primary transition-colors",
+          isRtl && "text-right"
+        )}
+      >
+        {item.title}
+      </h3>
 
-    <p className="text-sm text-muted-foreground mb-4 line-clamp-2 flex-grow">{item.subtitle}</p>
+      <p
+        dir={isRtl ? "rtl" : undefined}
+        className={cn(
+          "text-sm text-muted-foreground mb-4 line-clamp-2 flex-grow",
+          isRtl && "text-right"
+        )}
+      >
+        {item.subtitle}
+      </p>
 
     <div className="flex items-center justify-between mt-auto pt-3 border-t border-border">
       <span className="text-xs text-muted-foreground">{item.formattedDate}</span>
@@ -48,8 +67,9 @@ const CardContent = ({ item }: { item: ContentItem }) => (
         ))}
       </div>
     </div>
-  </>
-);
+    </>
+  );
+};
 
 const ContentCard = ({ item, index }: { item: ContentItem; index: number }) => {
   const animationProps = {
