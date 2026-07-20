@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { motion } from "framer-motion";
-import { MDXProvider } from "@mdx-js/react";
 import { ArrowLeft } from "lucide-react";
 import { Header } from "@/components/terminal/Header";
 import { Footer } from "@/components/terminal/Footer";
@@ -25,11 +24,18 @@ const BlogPost = () => {
     let cancelled = false;
     setArticle(undefined);
 
-    getArticleBySlug(slug).then((result) => {
-      if (!cancelled) {
-        setArticle(result);
-      }
-    });
+    getArticleBySlug(slug)
+      .then((result) => {
+        if (!cancelled) {
+          setArticle(result);
+        }
+      })
+      .catch((error) => {
+        console.error("Failed to load article:", error);
+        if (!cancelled) {
+          setArticle(null);
+        }
+      });
 
     return () => {
       cancelled = true;
@@ -125,10 +131,7 @@ const BlogPost = () => {
               </div>
             </motion.header>
 
-            <motion.article
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2 }}
+            <article
               dir={textDir}
               lang={lang}
               className="prose prose-invert prose-base max-w-none
@@ -137,10 +140,8 @@ const BlogPost = () => {
                 prose-li:text-foreground prose-strong:text-foreground
                 prose-a:text-primary prose-a:no-underline hover:prose-a:underline"
             >
-              <MDXProvider components={mdxComponents}>
-                <Component />
-              </MDXProvider>
-            </motion.article>
+              <Component components={mdxComponents} />
+            </article>
           </div>
         </div>
       </main>
