@@ -21,23 +21,25 @@ const cardClassName =
 
 const CardContent = ({ item }: { item: ContentItem }) => {
   const isRtl = hasHebrew(item.title) || hasHebrew(item.subtitle);
+  const isBlogCard = isInternalContent(item);
 
   return (
     <>
       <div className="flex items-start justify-between mb-3">
-      <span className="text-xs font-mono text-muted-foreground">{item.source}</span>
-      {!isInternalContent(item) && (
-        <ExternalLink
-          size={14}
-          className="text-muted-foreground group-hover:text-primary transition-colors"
-        />
-      )}
-    </div>
+        <span className="text-xs font-mono text-muted-foreground">{item.source}</span>
+        {!isInternalContent(item) && (
+          <ExternalLink
+            size={14}
+            className="text-muted-foreground group-hover:text-primary transition-colors"
+          />
+        )}
+      </div>
 
       <h3
         dir={isRtl ? "rtl" : undefined}
         className={cn(
-          "font-bold text-foreground mb-2 line-clamp-2 group-hover:text-primary transition-colors",
+          "mb-2 line-clamp-2 group-hover:text-primary transition-colors text-foreground",
+          isRtl || isBlogCard ? "font-blog text-xl font-extrabold" : "font-bold",
           isRtl && "text-right"
         )}
       >
@@ -47,26 +49,27 @@ const CardContent = ({ item }: { item: ContentItem }) => {
       <p
         dir={isRtl ? "rtl" : undefined}
         className={cn(
-          "text-sm text-muted-foreground mb-4 line-clamp-2 flex-grow",
+          "mb-4 line-clamp-2 flex-grow text-muted-foreground",
+          isRtl || isBlogCard ? "font-blog text-base font-semibold" : "text-sm",
           isRtl && "text-right"
         )}
       >
         {item.subtitle}
       </p>
 
-    <div className="flex items-center justify-between mt-auto pt-3 border-t border-border">
-      <span className="text-xs text-muted-foreground">{item.formattedDate}</span>
-      <div className="flex gap-2">
-        {item.tags.slice(0, 2).map((tag) => (
-          <span
-            key={tag}
-            className="text-xs px-2 py-0.5 border border-primary rounded text-primary"
-          >
-            {tag}
-          </span>
-        ))}
+      <div className="flex items-center justify-between mt-auto pt-3 border-t border-border">
+        <span className="text-xs text-muted-foreground">{item.formattedDate}</span>
+        <div className="flex gap-2">
+          {item.tags.slice(0, 2).map((tag) => (
+            <span
+              key={tag}
+              className="text-xs px-2 py-0.5 border border-primary rounded text-primary"
+            >
+              {tag}
+            </span>
+          ))}
+        </div>
       </div>
-    </div>
     </>
   );
 };

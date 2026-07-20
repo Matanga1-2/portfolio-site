@@ -112,10 +112,10 @@ const BlogPost = () => {
                 <span>·</span>
                 <span>{author}</span>
               </div>
-              <h1 className="text-2xl md:text-3xl font-bold tracking-tight leading-tight text-foreground">
+              <h1 className="text-3xl md:text-4xl font-extrabold tracking-tight leading-tight text-foreground">
                 {title}
               </h1>
-              <p className="text-muted-foreground text-lg leading-relaxed">{subtitle}</p>
+              <p className="text-muted-foreground text-xl font-semibold leading-relaxed">{subtitle}</p>
               <div className="flex flex-wrap gap-2">
                 {tags.map((tag) => (
                   <span
