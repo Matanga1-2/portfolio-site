@@ -1,3 +1,5 @@
+import { getArticleContentItems } from '@/lib/articles'
+
 export type ContentTag = 'AI' | 'Engineering' | 'Product' | 'Productivity' | 'Analysis'
 
 export interface ContentItem {
@@ -10,6 +12,8 @@ export interface ContentItem {
   url: string
   source: 'Blog' | 'Port' | 'TheNewStack' | 'Product @ Port' | 'LinkedIn' | 'YouTube' | 'Webinar' | 'Podcast'
 }
+
+export const isInternalContent = (item: ContentItem) => item.url.startsWith('/')
 
 export const contentData: ContentItem[] = [
   // === Podcasts ===
@@ -1010,5 +1014,11 @@ export const contentData: ContentItem[] = [
 export const sortedContentData = [...contentData].sort(
   (a, b) => b.date.getTime() - a.date.getTime()
 )
+
+export function getAllContent(): ContentItem[] {
+  return [...contentData, ...getArticleContentItems()].sort(
+    (a, b) => b.date.getTime() - a.date.getTime()
+  )
+}
 
 export const ALL_TAGS: ContentTag[] = ['AI', 'Engineering', 'Product', 'Productivity', 'Analysis']

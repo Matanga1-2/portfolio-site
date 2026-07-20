@@ -1,42 +1,62 @@
 import { useState, useMemo } from "react";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Search, X, ExternalLink } from "lucide-react";
 import { Header } from "@/components/terminal/Header";
 import { Footer } from "@/components/terminal/Footer";
-import { sortedContentData, ALL_TAGS, ContentTag, ContentItem } from "@/data/content";
+import {
+  getAllContent,
+  ALL_TAGS,
+  ContentTag,
+  ContentItem,
+  isInternalContent,
+} from "@/data/content";
+import { hasHebrew } from "@/lib/text";
+import { cn } from "@/lib/utils";
 
 const ITEMS_PER_PAGE = 9;
 
-const ContentCard = ({ item, index }: { item: ContentItem; index: number }) => {
+const cardClassName =
+  "group bg-card border border-border p-5 hover:border-primary/50 transition-all duration-300 hover:-translate-y-1 flex flex-col";
+
+const CardContent = ({ item }: { item: ContentItem }) => {
+  const isRtl = hasHebrew(item.title) || hasHebrew(item.subtitle);
+  const isBlogCard = isInternalContent(item);
+
   return (
-    <motion.a
-      href={item.url}
-      target="_blank"
-      rel="noopener noreferrer"
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: index * 0.05 }}
-      className="group bg-card border border-border p-5 hover:border-primary/50 transition-all duration-300 hover:-translate-y-1 flex flex-col"
-    >
-      {/* Header */}
+    <>
       <div className="flex items-start justify-between mb-3">
-        <span className="text-xs font-mono text-muted-foreground">
-          {item.source}
-        </span>
-        <ExternalLink size={14} className="text-muted-foreground group-hover:text-primary transition-colors" />
+        <span className="text-xs font-mono text-muted-foreground">{item.source}</span>
+        {!isInternalContent(item) && (
+          <ExternalLink
+            size={14}
+            className="text-muted-foreground group-hover:text-primary transition-colors"
+          />
+        )}
       </div>
 
-      {/* Title */}
-      <h3 className="font-bold text-foreground mb-2 line-clamp-2 group-hover:text-primary transition-colors">
+      <h3
+        dir={isRtl ? "rtl" : undefined}
+        className={cn(
+          "mb-2 line-clamp-2 group-hover:text-primary transition-colors text-foreground",
+          isRtl || isBlogCard ? "font-blog text-xl font-extrabold" : "font-bold",
+          isRtl && "text-right"
+        )}
+      >
         {item.title}
       </h3>
 
-      {/* Subtitle */}
-      <p className="text-sm text-muted-foreground mb-4 line-clamp-2 flex-grow">
+      <p
+        dir={isRtl ? "rtl" : undefined}
+        className={cn(
+          "mb-4 line-clamp-2 flex-grow text-muted-foreground",
+          isRtl || isBlogCard ? "font-blog text-base font-semibold" : "text-sm",
+          isRtl && "text-right"
+        )}
+      >
         {item.subtitle}
       </p>
 
-      {/* Footer */}
       <div className="flex items-center justify-between mt-auto pt-3 border-t border-border">
         <span className="text-xs text-muted-foreground">{item.formattedDate}</span>
         <div className="flex gap-2">
@@ -50,17 +70,48 @@ const ContentCard = ({ item, index }: { item: ContentItem; index: number }) => {
           ))}
         </div>
       </div>
+    </>
+  );
+};
+
+const ContentCard = ({ item, index }: { item: ContentItem; index: number }) => {
+  const animationProps = {
+    initial: { opacity: 0, y: 20 } as const,
+    animate: { opacity: 1, y: 0 } as const,
+    transition: { delay: index * 0.05 },
+  };
+
+  if (isInternalContent(item)) {
+    return (
+      <motion.div {...animationProps}>
+        <Link to={item.url} className={cardClassName}>
+          <CardContent item={item} />
+        </Link>
+      </motion.div>
+    );
+  }
+
+  return (
+    <motion.a
+      href={item.url}
+      target="_blank"
+      rel="noopener noreferrer"
+      {...animationProps}
+      className={cardClassName}
+    >
+      <CardContent item={item} />
     </motion.a>
   );
 };
 
 const Content = () => {
+  const allContent = useMemo(() => getAllContent(), []);
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedTags, setSelectedTags] = useState<ContentTag[]>([]);
   const [currentPage, setCurrentPage] = useState(1);
 
   const filteredContent = useMemo(() => {
-    return sortedContentData.filter((item) => {
+    return allContent.filter((item) => {
       const searchLower = searchQuery.toLowerCase();
       const matchesSearch =
         !searchQuery ||
@@ -69,12 +120,11 @@ const Content = () => {
         item.tags.some((tag) => tag.toLowerCase().includes(searchLower));
 
       const matchesTags =
-        selectedTags.length === 0 ||
-        selectedTags.some((tag) => item.tags.includes(tag));
+        selectedTags.length === 0 || selectedTags.some((tag) => item.tags.includes(tag));
 
       return matchesSearch && matchesTags;
     });
-  }, [searchQuery, selectedTags]);
+  }, [allContent, searchQuery, selectedTags]);
 
   const totalPages = Math.ceil(filteredContent.length / ITEMS_PER_PAGE);
 
@@ -111,31 +161,31 @@ const Content = () => {
       <Header />
       <main className="container mx-auto px-4 pt-24 pb-20">
         <div className="max-w-5xl mx-auto">
-          {/* Header */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             className="text-center mb-12"
           >
-            <div className="flex items-center justify-center gap-4 mb-4">
+            <motion.div className="flex items-center justify-center gap-4 mb-4">
               <span className="text-primary text-sm">cat</span>
               <h1 className="text-3xl font-bold">./content</h1>
-            </div>
+            </motion.div>
             <p className="text-muted-foreground">
               Insights on Engineering, Product, AI, and Productivity
             </p>
           </motion.div>
 
-          {/* Filters */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
             className="bg-card border border-border p-6 mb-8"
           >
-            {/* Search */}
             <div className="relative mb-4">
-              <Search size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground" />
+              <Search
+                size={16}
+                className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground"
+              />
               <input
                 type="text"
                 placeholder="Search posts..."
@@ -153,7 +203,6 @@ const Content = () => {
               )}
             </div>
 
-            {/* Tags */}
             <div className="flex flex-wrap gap-2 mb-4">
               {ALL_TAGS.map((tag) => (
                 <button
@@ -170,23 +219,18 @@ const Content = () => {
               ))}
             </div>
 
-            {/* Results count and clear */}
             <div className="flex items-center justify-between text-xs text-muted-foreground">
               <span>
-                {filteredContent.length} of {sortedContentData.length} posts
+                {filteredContent.length} of {allContent.length} posts
               </span>
               {(searchQuery || selectedTags.length > 0) && (
-                <button
-                  onClick={handleClearFilters}
-                  className="text-primary hover:underline"
-                >
+                <button onClick={handleClearFilters} className="text-primary hover:underline">
                   Clear filters
                 </button>
               )}
             </div>
           </motion.div>
 
-          {/* Content Grid */}
           {paginatedContent.length > 0 ? (
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
               {paginatedContent.map((item, index) => (
@@ -194,18 +238,14 @@ const Content = () => {
               ))}
             </div>
           ) : (
-            <div className="text-center py-12">
+            <motion.div className="text-center py-12">
               <p className="text-muted-foreground mb-4">No posts found matching your filters.</p>
-              <button
-                onClick={handleClearFilters}
-                className="text-primary hover:underline"
-              >
+              <button onClick={handleClearFilters} className="text-primary hover:underline">
                 Clear filters
               </button>
-            </div>
+            </motion.div>
           )}
 
-          {/* Pagination */}
           {totalPages > 1 && (
             <div className="flex items-center justify-center gap-2">
               <button

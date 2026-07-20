@@ -8,6 +8,7 @@ import Content from "./pages/Content";
 import TheLotter from "./pages/work/TheLotter";
 import IDF from "./pages/work/IDF";
 import Lusha from "./pages/work/Lusha";
+import BlogPost from "./pages/BlogPost";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -21,6 +22,7 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/content" element={<Content />} />
+          <Route path="/content/:slug" element={<BlogPost />} />
           <Route path="/work/thelotter" element={<TheLotter />} />
           <Route path="/work/idf" element={<IDF />} />
           <Route path="/work/lusha" element={<Lusha />} />

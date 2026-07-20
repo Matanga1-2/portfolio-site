@@ -16,6 +16,7 @@ export default {
       fontFamily: {
         mono: ["JetBrains Mono", "monospace"],
         sans: ["Inter", "system-ui", "sans-serif"],
+        blog: ["Heebo", "Inter", "system-ui", "sans-serif"],
         blueprint: ["Space Mono", "monospace"],
         serif: ["Instrument Serif", "Georgia", "serif"],
       },
@@ -117,5 +118,5 @@ export default {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography")],
 } satisfies Config;
