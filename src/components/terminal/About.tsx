@@ -33,7 +33,7 @@ export const About = () => {
             <div className="md:col-span-3 space-y-6 overflow-hidden">
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
-                  <span className="text-primary">#</span> I'm a product leader who builds with AI.
+                  <span className="text-primary">#</span> I'm a hands-on product leader.
                   I create products and workflows that solve real engineering problems.
                   My approach is hands-on—I care about what users actually need,
                   not what sounds impressive.

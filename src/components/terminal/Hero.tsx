@@ -89,12 +89,12 @@ export const Hero = () => {
             className="mt-12 text-center"
           >
             <h1 className="text-2xl md:text-3xl font-bold mb-4">
-              <span className="text-foreground">Product leader who builds with </span>
-              <span className="text-primary">AI.</span>
+              <span className="text-foreground">Hands-on </span>
+              <span className="text-primary">product leader</span>
             </h1>
             <p className="text-muted-foreground max-w-xl mx-auto">
+              Imagine how developers and agents collaborate in the AI era.
               I create products and workflows that solve real engineering problems.
-              Hands-on approach, care about what users actually need.
               Shipped one of the first AI agents and MCP servers in platform engineering.
             </p>
 
